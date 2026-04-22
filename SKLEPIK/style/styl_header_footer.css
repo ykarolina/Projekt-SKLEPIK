@@ -115,17 +115,17 @@ a{
 }
 
 .media span{
-    font-size: 18px;
+    font-size: 25px;
     margin-bottom: 5px;
 }
 
 .ikony{
     display: inline-flex;
-    gap: 10px;
+    gap: 12px;
 }
 
 .ikony img{
-    height: 25px;
+    height: 35px;
 }
 /*============================= DO BOOTSTRAPA ZEBY NA TELEFONIE WYGLADLO GIT ===============================*/
 @media (max-width: 767px) {
