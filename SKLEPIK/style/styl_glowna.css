@@ -28,12 +28,15 @@
 
 .imgHeader{
     height: 80px;
+    padding-top: 10px;
 }
 
 .logo{
-    height: 80px;
+    height: 55px;
     text-align: left;
-    margin: 0px;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    margin-top: 13px;
 }
 /*============================= Promocje ===============================*/
 .promocje{
