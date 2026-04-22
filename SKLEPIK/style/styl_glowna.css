@@ -5,24 +5,43 @@
 .banner{
     width: 100%;
     margin: 0px;
-    height: 100px;
+    height: 80px;
     font-size: 25px;
     background-color: #970F06;
     font-family: Arial, Helvetica, sans-serif;
-    text-align: right;
     vertical-align: middle;
+    justify-content: center;
+    text-align: justify;
+    display: flex;
+}
+.logoDiv{
+    width: 60%;
+}
+
+.kontener2{
+  display: flex;    
+  align-items: center;    
+  justify-content: center; 
+  gap: 10px;   
+  width: 40%;
 }
 
 .imgHeader{
-    height: 100px;
+    height: 80px;
 }
 
+.logo{
+    height: 80px;
+    text-align: left;
+    margin: 0px;
+}
 /*============================= Promocje ===============================*/
 .promocje{
     width: 65%;
     height: 400px;
     text-align: center;
     justify-items: center;
+    /* background-color: aqua; */
 }
 
 .promoProdukt{
@@ -83,6 +102,7 @@
     width: 35%;
     height: 400px;
     text-align: center;
+    /* background-color: green; */
 }
 
 .tekstGodziny{
