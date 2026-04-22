@@ -1,43 +1,7 @@
 *{
     font-family: Arial, Helvetica, sans-serif;
 }
-/*============================= HEADER ===============================*/
-.banner{
-    width: 100%;
-    margin: 0px;
-    height: 80px;
-    font-size: 25px;
-    background-color: #970F06;
-    font-family: Arial, Helvetica, sans-serif;
-    vertical-align: middle;
-    justify-content: center;
-    text-align: justify;
-    display: flex;
-}
-.logoDiv{
-    width: 60%;
-}
 
-.kontener2{
-  display: flex;    
-  align-items: center;    
-  justify-content: center; 
-  gap: 10px;   
-  width: 40%;
-}
-
-.imgHeader{
-    height: 80px;
-    padding-top: 10px;
-}
-
-.logo{
-    height: 55px;
-    text-align: left;
-    margin-left: 35px;
-    margin-bottom: 10px;
-    margin-top: 13px;
-}
 /*============================= Promocje ===============================*/
 .promocje{
     width: 65%;

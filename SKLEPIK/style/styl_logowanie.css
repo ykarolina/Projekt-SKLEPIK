@@ -1,0 +1,71 @@
+*{
+    font-family: "Lilita One", cursive, Comic Sans MS;
+    font-weight: 100;
+}
+.sectionLogowanie{
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.tytulLogowanie{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+.ramkaLogowanie{
+    border: 2px solid #555;
+    border-radius: 30px;
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.labelLog{
+    text-align: left;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.labelLog label{
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.inputLog{
+    width: 100%;
+    padding: 12px;
+    border: 2px solid black;
+    border-radius: 12px;
+    box-sizing: border-box; 
+}
+
+.btnLog{
+    background-color: #FFCC33;
+    border: 1px solid black;
+    border-radius: 12px;
+    width: 100%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btnLog:hover{
+    background-color: #f0c02f;
+}
+
+.tekstLog{
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.linkUzytkownik{
+    color: #970F06;
+    text-decoration: none;
+}
+
+.linkAdmin{
+    color: black;
+    text-decoration: none;
+}   

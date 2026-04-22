@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zegowska Szama - logowanie</title>
+     <link rel="stylesheet" href="../style/styl_header.css">
+     <link rel="stylesheet" href="../style/styl_logowanie.css">
+     <!--mozliwosc uzywanie czcionki uzywanej w planie intersejsu-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="banner">
+        <div class="logoDiv"><img src="../grafiki/loga/zegowskaSzama_v2.png" class="logo"></div>
+        <div class="kontener2">
+            <a href="#"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"></a> 
+            <a href="#">Koszyk</a>
+            <a href="#"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"></a>
+            <a href="#">Konto</a>
+            <a href="#"><img src="../grafiki/loga/admin.png" class="imgHeader"></a>
+            <a href="#">Admin</a> 
+        </div>
+    </header> 
+    <main class="sectionLogowanie">
+    <h2 class="tytulLogowanie">Zaloguj sie</h2>
+    
+    <div class="ramkaLogowanie">
+        <form>
+            <div class="labelLog">
+                <label>Email:</label>
+                <input type="email" name="email" class="inputLog">
+            </div>
+
+            <div class="labelLog">
+                <label>Hasło:</label>
+                <input type="password" name="password" class="inputLog">
+            </div>
+
+            <button type="submit" class="btnLog">Zaloguj</button>
+        </form>
+    </div>
+
+    <p class="tekstLog">Nie masz jeszcze konta? <a href="#" class="linkUzytkownik">Zarejestruj sie</a></p>
+    <p class="tekstLog"><a href="#" class="linkAdmin">Zaloguj jako administrator</a></p>
+</main>  
+</body>
+</html>
