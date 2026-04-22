@@ -1,0 +1,123 @@
+*{
+    font-family: "Lilita One", cursive, Comic Sans MS;
+    font-weight: 100;
+}
+
+html, body {
+    height: 100%; 
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; 
+}
+/*============================= header ===============================*/
+.banner{
+   width: 100%;
+    margin: 0px;
+    height: 80px;
+    font-size: 25px;
+    background-color: #970F06;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.logoDiv{
+    width: 60%;
+}
+
+.kontener2{
+  display: flex;    
+  align-items: center;    
+  justify-content: center; 
+  gap: 10px;   
+  width: 40%;
+}
+
+.imgHeader{
+    height: 80px;
+    padding-top: 10px;
+}
+
+.logo{
+    height: 55px;
+    text-align: left;
+    margin-left: 35px;
+    margin-bottom: 10px;
+    margin-top: 13px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+/*============================= footer ===============================*/
+.stopka{
+    background-color: #970F06;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    margin-top: 0; 
+}
+
+.stopkaKontener{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.stopkaSection{
+    flex: 1;
+}
+
+/*Lewa*/
+.dane p {
+    margin: 5px 0;
+    font-size: 14px;
+    text-align: left;
+}
+
+/*Środek*/
+.zeg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    text-align: left;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.logoZEG{
+    height: 60px;
+    border-radius: 50%;
+}
+
+/*Prawa strona*/
+.media{
+   display: flex;
+    flex-direction: column; 
+    align-items: flex-end;    
+    text-align: right;
+}
+
+.media span{
+    font-size: 18px;
+    margin-bottom: 10px; /* Odstęp między napisem a ikonami */
+    margin-right: 0;
+}
+
+.ikony{
+    display: inline-flex;
+    gap: 10px;
+}
+
+.ikony img{
+    height: 25px;
+}
+
