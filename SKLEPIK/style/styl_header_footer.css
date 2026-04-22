@@ -15,7 +15,7 @@ body {
 }
 /*============================= header ===============================*/
 .banner{
-   width: 100%;
+    width: 100%;
     margin: 0px;
     height: 80px;
     font-size: 25px;
@@ -53,37 +53,45 @@ a{
     text-decoration: none;
     color: white;
 }
+/*============================= DO BOOTSTRAPA ZEBY NA TELEFONIE WYGLADLO GIT ===============================*/
+@media (max-width: 767px) {
+    .banner{
+        height: auto;
+        padding: 10px;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .logo{
+        height: 40px;
+        margin-left: 0;
+        max-width: 90%;
+        object-fit: contain;
+    }
+
+    .logoDiv{
+        width: 100%;
+        text-align: center;
+    }
+}
 /*============================= footer ===============================*/
 .stopka{
     background-color: #970F06;
     color: white;
-    padding: 20px 0;
+    padding: 10px 0px;
     width: 100%;
-    margin-top: 0; 
-}
-
-.stopkaKontener{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.stopkaSection{
-    flex: 1;
+    margin-top: 0px;
 }
 
 /*Lewa*/
-.dane p {
-    margin: 5px 0;
+.dane p{
+    margin: 2px 0;
     font-size: 14px;
     text-align: left;
 }
 
 /*Środek*/
-.zeg {
+.zeg{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -98,9 +106,9 @@ a{
     border-radius: 50%;
 }
 
-/*Prawa strona*/
+/*Prawa*/
 .media{
-   display: flex;
+    display: flex;
     flex-direction: column; 
     align-items: flex-end;    
     text-align: right;
@@ -108,8 +116,7 @@ a{
 
 .media span{
     font-size: 18px;
-    margin-bottom: 10px; /* Odstęp między napisem a ikonami */
-    margin-right: 0;
+    margin-bottom: 5px;
 }
 
 .ikony{
@@ -119,5 +126,19 @@ a{
 
 .ikony img{
     height: 25px;
+}
+/*============================= DO BOOTSTRAPA ZEBY NA TELEFONIE WYGLADLO GIT ===============================*/
+@media (max-width: 767px) {
+    .stopka{
+        padding: 20px 10px;
+    }
+    .dane p, .media, .zeg{
+        text-align: center;
+        align-items: center;
+    }
+
+    .ikony{
+        justify-content: center;
+    }
 }
 
