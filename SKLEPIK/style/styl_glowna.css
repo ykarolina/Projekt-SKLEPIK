@@ -1,0 +1,114 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*============================= HEADER ===============================*/
+.banner{
+    width: 100%;
+    margin: 0px;
+    height: 100px;
+    font-size: 25px;
+    background-color: #970F06;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: right;
+    vertical-align: middle;
+}
+
+.imgHeader{
+    height: 100px;
+}
+
+/*============================= Promocje ===============================*/
+.promocje{
+    width: 65%;
+    height: 400px;
+    text-align: center;
+    justify-items: center;
+}
+
+.promoProdukt{
+    width: 250px;
+    height: 285px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border: 2px solid black;
+    border-radius: 30px;
+}
+
+.btnPromo{
+    font-size: 20px;
+    margin: 5px;
+    width: 190;
+    border-radius: 8px;
+    font-weight: 600;
+    background-color: #970F06;
+    color: white;
+}
+
+.promoTekst{ 
+    margin: 0px;
+    margin-left: 25px;
+    font-size: 25px;
+    font-weight: 800;
+    width: 50%;
+    text-align: left;
+    color: black;
+}
+
+.promoCena{ 
+    margin: 0px;
+    margin-left: 25px;
+    font-size: 25px;
+    font-weight: 800;
+    width: 5%;
+    text-align: left;
+    color: #970F06;
+}
+
+.sortTekst{
+    display: flex;
+    align-content: center;
+    text-align: justify;
+}
+
+.sortProdukty{  
+    display: flex;
+}
+
+.zdjPromo{
+    margin: 5px;
+}
+
+/*============================= Godziny otwarcia ===============================*/
+.godz_Otwarcia{
+    width: 35%;
+    height: 400px;
+    text-align: center;
+}
+
+.tekstGodziny{
+    margin: 0px;
+    font-size: 25px;
+    font-weight: 800;
+    color: #970F06;
+}
+
+/*============================= Inne ===============================*/
+
+main{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+h1{
+    font-size: 55px;
+    font-weight: 900;
+    color: #970F06;
+    margin: 20px 0px 20px 0px;
+}
+h2{
+    font-size: 35px;
+    font-weight: 900;
+}
