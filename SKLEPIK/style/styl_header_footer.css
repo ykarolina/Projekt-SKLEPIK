@@ -119,8 +119,10 @@ a{
     }
 
     .logo{  
-        height: 25px;
+        height: 27px;
         margin: 0;
+        margin-bottom: 10px;
+        margin-top: 10px;
     }
 
     .logoDiv{
