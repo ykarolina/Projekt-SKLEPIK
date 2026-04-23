@@ -14,6 +14,7 @@ body {
     flex-direction: column; 
 }
 /*============================= header ===============================*/
+
 .banner{
     width: 100%;
     margin: 0px;
@@ -69,7 +70,7 @@ a{
 .navTel{
     display: none; 
     position: absolute;
-    top: 75px;
+    top: 30px;
     right: 20px;
     background-color: #970F06;
     border: 2px solid white;
@@ -102,22 +103,24 @@ a{
     .menuTel{
         display: flex;
     }
+    .logo{
+        margin-left: -10px;
+    }
+    
 }
 /*============================= DO BOOTSTRAPA ZEBY NA TELEFONIE WYGLADLO GIT ===============================*/
 @media (max-width: 767px) {
     .banner{
         height: 80px;
-        padding: 0 20px;
+        padding: 0px;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
     }
 
-    .logo{
-        height: 30px;
-        margin-left: 0;
-        margin-top: 0;
-        margin-bottom: 0;
+    .logo{  
+        height: 25px;
+        margin: 0;
     }
 
     .logoDiv{
