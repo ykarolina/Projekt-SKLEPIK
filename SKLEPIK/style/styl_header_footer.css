@@ -53,25 +53,80 @@ a{
     text-decoration: none;
     color: white;
 }
+.menuTel{
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+.menuTel span{
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+.navTel{
+    display: none; 
+    position: absolute;
+    top: 75px;
+    right: 20px;
+    background-color: #970F06;
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px;
+    flex-direction: column;
+    gap: 2px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+}
+.navTel.active{
+    display: flex;
+}
+.navTel a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 18px;
+}
+@media (max-width: 1200px){
+    .navTel img{
+        width: 50px;
+        height: 60px;
+    }
+    .kontener2{
+        display: none;
+    }
+
+    .menuTel{
+        display: flex;
+    }
+}
 /*============================= DO BOOTSTRAPA ZEBY NA TELEFONIE WYGLADLO GIT ===============================*/
 @media (max-width: 767px) {
     .banner{
-        height: auto;
-        padding: 10px;
-        flex-direction: column;
-        justify-content: center;
+        height: 80px;
+        padding: 0 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .logo{
-        height: 40px;
+        height: 30px;
         margin-left: 0;
-        max-width: 90%;
-        object-fit: contain;
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .logoDiv{
-        width: 100%;
-        text-align: center;
+        width: auto;
+        text-align: left;
+    }
+
+    .menuTel{
+        display: flex;
     }
 }
 /*============================= footer ===============================*/

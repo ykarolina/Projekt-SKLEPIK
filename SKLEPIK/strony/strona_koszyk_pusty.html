@@ -3,49 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zegowska Szama - logowanie</title>
+    <title>Zegowska Szama - koszyk pusty</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="../style/styl_header_footer.css">
-    <link rel="stylesheet" href="../style/styl_logowanie_rejestracja.css">
-
+    <link rel="stylesheet" href="../style/styl_koszyk.css">
+    <!--aby czcionka z excalidraw byla taka sama-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="banner">
-        <div class="container-fluid">
-            <div class="logoDiv"><img src="../grafiki/loga/zegowskaSzama_v2.png" class="logo"></div>
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+        <div class="logoDiv">
+            <img src="../grafiki/loga/zegowskaSzama_v2.png" class="logo">
         </div>
-    </header>
-
-    <main class="sectionLogRej container">
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-6 col-lg-4">
-                <h2 class="tytulLogRej">Zaloguj sie</h2>
-                
-                <div class="ramkaLogRej">
-                    <form>
-                        <div class="labelLogRej">
-                            <label>Email:</label>
-                            <input type="email" name="email" class="inputLogRej">
-                        </div>
-
-                        <div class="labelLogRej">
-                            <label>Hasło:</label>
-                            <input type="password" name="haslo" class="inputLogRej">
-                        </div>
-
-                        <button type="submit" class="btnLogRej">Zaloguj</button>
-                    </form>
-                </div>
-
-                <p class="tekstLog">Nie masz jeszcze konta? <a href="strona_rejestracja.html" class="linkUzytkownik">Zarejestruj sie</a></p>
-                <p class="tekstLog"><a href="#" class="linkAdmin">Zaloguj jako administrator</a></p>
-            </div>
+        <div class="kontener2">
+            <a href="strona_glowna.html"><img src="../grafiki/loga/logo_hot-dog.png" class="imgHeader"> Produkty</a> 
+            <a href="#"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"> Konto</a>
+            <a href="#"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
         </div>
-    </main>
+    </div>
+    <div class="menuTel" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <nav class="navTel" id="mobileMenu">
+        <a href="strona_glowna.html"><img src="../grafiki/loga/logo_hot-dog.png" class="imgHeader"> Produkty</a>
+        <a href="#"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"> Konto</a>
+        <a href="#"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
+    </nav>
+</header>
+<script>
+function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+}
+</script>
+
+    <main class="mainPustyKosz">
+    <div class="content">
+        <h2 class="tytulLPustyKosz">Twój koszyk jest pusty</h2>
+        <button type="button" class="btnPustyKosz">
+            <a href="strona_glowna.html">Rozpocznij zakupy</a>
+        </button>
+    </div>
+</main>
 
    <footer class="stopka">
     <div class="container">

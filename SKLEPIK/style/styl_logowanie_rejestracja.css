@@ -3,18 +3,18 @@
     font-weight: 100;
 }
 
-.sectionLogowanie{
+.sectionLogRej{
     flex: 1; 
     text-align: center;
     padding: 50px 20px;
 }
 
-.tytulLogowanie{
+.tytulLogRej{
     font-size: 50px;
     margin-bottom: 30px;
 }
 
-.ramkaLogowanie{
+.ramkaLogRej{
     border: 2px solid #555;
     border-radius: 30px;
     max-width: 450px;
@@ -22,19 +22,19 @@
     padding: 20px 40px 20px 40px;
 }
 
-.labelLog{
+.labelLogRej{
     text-align: left;
     margin-bottom: 25px;
     width: 100%;
 }
 
-.labelLog label{
+.labelLogRej label{
     display: block;
     font-size: 18px;
     margin-bottom: 8px;
 }
 
-.inputLog{
+.inputLogRej{
     width: 100%;
     padding: 12px;
     border: 2px solid black;
@@ -42,7 +42,7 @@
     box-sizing: border-box; 
 }
 
-.btnLog{
+.btnLogRej{
     background-color: #FFCC33;
     border: 1px solid black;
     border-radius: 12px;
@@ -53,7 +53,7 @@
     margin-top: 10px;
 }
 
-.btnLog:hover{
+.btnLogRej:hover{
     background-color: #f0c02f;
 }
 

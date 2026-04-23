@@ -1,0 +1,30 @@
+.mainPustyKosz{
+    flex-grow: 1; /* Sprawia, że main zajmuje całą wolną przestrzeń między headerem a footerem */
+    display: flex;
+    align-items: center; /* Centrowanie w pionie */
+    justify-content: center; /* Centrowanie w poziomie */
+    text-align: center;
+    padding: 50px 0;
+}
+.tytulLPustyKosz{
+    font-size: 48px; /* Duży napis jak na projekcie */
+    margin-bottom: 30px;
+    color: #1a1a1a;
+}
+.btnPustyKosz{
+    background-color: #FFD24D; /* Żółty kolor z projektu */
+    border: 2px solid #1a1a1a; /* Ciemna obramówka */
+    border-radius: 15px; /* Zaokrąglone rogi */
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.btnPustyKosz:hover {
+    background-color: #ffc41a; /* Ciemniejszy żółty po najechaniu */
+}
+.btnPustyKosz a{
+    text-decoration: none;
+    color: #1a1a1a; /* Czarny tekst */
+    font-size: 24px;
+    display: block;
+}
