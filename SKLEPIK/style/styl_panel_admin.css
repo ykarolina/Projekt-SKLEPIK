@@ -17,7 +17,7 @@
     border: 1px solid black;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .btnAdminPanel{
         font-size: 3.2vw; 
         padding: 10px 2px;
@@ -32,7 +32,7 @@
 
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
     .btnAdminPanel{
         width: auto;
         font-size: 18px;
@@ -41,4 +41,98 @@
     }
 }
 
+/*=========================zmiana rol================*/
+select.inputLogRej {
+    cursor: pointer;
+    padding-right: 30px;
+}
+.ramka{
+    border: 2px solid #555;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+.inputAdmin{
+    width: 250px;
+    height: 35px;
+    padding: 9px;
+    border: 2px solid black;
+    border-radius: 12px;
+    box-sizing: border-box; 
+}
+.ramkaRola select {
+    border: 2px solid black;
+    border-radius: 12px;
+    padding: 9px;
+}
+
+@media (max-width: 576px) {
+    .ramkaRola .d-flex {
+        justify-content: center !important;
+        text-align: center;
+    }
+    
+    .ramkaRola label {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .inputRola{
+        width: 250px;
+        height: 35px;
+        padding: 9px;
+    }
+    
+}
+/*=========================edycja produktu================*/
+
+.ramkaEdycja{
+    background-color: white;
+    border: 1px solid #000000;
+    border-radius: 20px;
+    padding: 30px;
+    display: inline-block;
+    max-width: 320px; 
+    width: 100%;
+}
+
+.formEdycj{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.divEdycja{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+}
+
+.InpEdycja{
+    border: 1px solid black;
+    border-radius: 12px;
+    padding: 8px 12px;
+    height: 40px;
+    width: 250px;
+    max-width: 100%;
+    background-color: white;
+}
+
+.btnadminzatwierdz{
+    background-color: #FFCD3C;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px 25px;
+    color: black;
+    cursor: pointer;
+    text-align: center;
+    display: inline-flex;
+    width: 260px;
+}
+
+.labEdycja{
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: black;
+}
 

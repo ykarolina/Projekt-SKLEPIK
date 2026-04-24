@@ -95,6 +95,101 @@
         </section>
 
 
+        <section class="dodajProdukt container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-8 col-lg-6 d-flex justify-content-center">
+            <div class="ramka p-4">
+                <h2 class="tytulPanel fs-3 mb-4 text-center">DODAJ PRODUKT</h2>
+                <form>
+                    <div class="mb-3 text-start px-md-4">
+                        <label class="d-block mb-1">Nazwa:</label>
+                        <input type="text" name="nazwaProduktu" class="inputAdmin w-100">
+                    </div>
+
+                    <div class="mb-3 text-start px-md-4">
+                        <label class="d-block mb-1">Kategoria:</label>
+                        <select name="kategoria" class="inputAdmin w-auto min-width-select">
+                           
+                        </select>
+                    </div>
+
+                    <div class="mb-3 text-start px-md-4">
+                        <label class="d-block mb-1">Nazwa zdjecie(.rozszerzenie):</label>
+                        <input type="text" name="foto" class="inputAdmin w-100">
+                    </div>
+
+                    <div class="mb-3 text-start px-md-4">
+                        <label class="d-block mb-1">Cena</label>
+                        <input type="number" step="0.01" name="cena" class="inputAdmin w-100">
+                    </div>
+
+                    <div class="d-flex justify-content-center gap-4 mb-4">
+                        <div class="form-check d-flex align-items-center gap-2">
+                            <input class="custom-radio" type="radio" name="promocja" id="brak" value="0" checked>
+                            <label class="labelLogRej" for="brak">brak promocji</label>
+                        </div>
+                        <div class="form-check d-flex align-items-center gap-2">
+                            <input class="custom-radio" type="radio" name="promocja" id="na" value="1">
+                            <label class="labelLogRej" for="na">na promocji</label>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btnAdminPanel px-5 py-2 w-auto mx-auto">dodaj produkt</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="sectionEdycja container mt-5">
+    <h2 class="tytulPanel fs-2 mb-5 text-center">EDYTUJ PRODUKT</h2>
+    <div class="row gy-5 align-items-start justify-content-center">
+        <div class="col-12 col-md-5 ps-md-5">
+            <h3 class="fs-4 mb-3 text-center text-md-start">lista produktów</h3>
+            <div class="d-flex flex-column align-items-center align-items-md-start">
+                <label class="mb-1">kategoria:</label>
+                <select name="katLista">
+                    <option value="kawa">kawa</option>
+                    <option value="jedzenie">jedzenie</option>
+                </select>
+                </div>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+            <div class="ramkaEdycja p-4">
+                <h2 class="tytulPanel fs-3 mb-4 text-center">EDYTOWANIE PRODUKTU</h2>
+
+                <form class="formEdycja d-flex flex-column gap-3">
+                    <div class="divEdycja d-flex gap-3">
+                        <label class="labEdycja mb-0">Numer produktu:</label>
+                        <input type="text" name="nrProduktu" class="InpEdycja">
+                    </div>
+
+                    <div class="divEdycja d-flex gap-3">
+                        <label class="labEdycja mb-0">edytuj pole:</label>
+                        <select name="wyborPola" class="InpEdycja">
+                            <option value="nazwa">nazwa</option>
+                            <option value="cena">cena</option>
+                        </select>
+                    </div>
+
+                    <div class="divEdycja d-flex gap-3">
+                        <label class="labEdycja mb-0">zmiana na:</label>
+                        <input type="text" name="nowaWartosc" class="InpEdycja">
+                    </div>
+
+                    <div class="d-flex justify-content-center align-items-center mt-2">
+                        <button type="submit" class="btnadminzatwierdz">
+                            zaktualizuj produkt
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
    <footer class="stopka">
     <div class="container">
         <div class="row align-items-center gy-4 gy-md-0">
