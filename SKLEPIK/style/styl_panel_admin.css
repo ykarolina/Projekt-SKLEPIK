@@ -2,6 +2,9 @@
     font-family: "Lilita One", cursive;
     font-size: 45px;
 }
+.strona{
+    flex: 1;
+}
 .btnAdminPanel{
     background-color: #FFCC33;
     color: black;
@@ -19,7 +22,7 @@
 
 @media (max-width: 767px) {
     .btnAdminPanel{
-        font-size: 3.2vw; 
+        font-size: 3.0vw; 
         padding: 10px 2px;
         min-height: 45px;
         display: flex;
@@ -29,15 +32,21 @@
     .tytulAdmin{
     font-size: 45px;
     }
+    .btnDodajProdukt{
+        font-size: 4.0vw; 
+    }
 
 }
 
 @media (min-width: 768px) {
     .btnAdminPanel{
         width: auto;
-        font-size: 18px;
+        font-size: 23px;
         padding: 10px 20px;
         margin-right: 20px;
+    }
+    .tytulAdmin{
+    font-size: 80px;
     }
 }
 
@@ -46,14 +55,15 @@ select.inputLogRej {
     cursor: pointer;
     padding-right: 30px;
 }
+
 .ramka{
     border: 2px solid #555;
     border-radius: 30px;
     margin-bottom: 20px;
 }
 .inputAdmin{
-    width: 250px;
-    height: 35px;
+    width: 300px;
+    height: 55px;
     padding: 9px;
     border: 2px solid black;
     border-radius: 12px;
@@ -67,7 +77,7 @@ select.inputLogRej {
 
 @media (max-width: 576px) {
     .ramkaRola .d-flex {
-        justify-content: center !important;
+        justify-content: center;
         text-align: center;
     }
     
@@ -136,3 +146,100 @@ select.inputLogRej {
     color: black;
 }
 
+/*=========================lista zamowien================*/
+.tytulZamowien{
+    font-size: 3.5rem;
+}
+
+.kafelekZamowienie{
+    border: 2px solid #000000;
+    border-radius: 35px;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nazwaKlienta{
+    font-size: 1.6rem;
+    color: #000000;
+}
+
+.kontenerProduktow{
+    flex-grow: 1;
+    overflow-x: auto;
+    padding-bottom: 15px;
+    scrollbar-width: thin;
+}
+
+.ramkaMiniZdj{
+    border: 1px solid #000000;
+    border-radius: 20px;
+    background-color: white;
+    padding: 15px;
+    min-width: 170px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgZdjMini{
+    width: 85px;
+    height: 85px;
+    object-fit: contain;
+}
+
+.nazwaMiniProd{
+    font-size: 1rem;
+    color: #000;
+    margin-top: 8px;
+}
+
+.wariantProd{
+    font-size: 0.8rem;
+    margin-top: -2px;
+}
+
+.statusZamowienia{
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.miniSelect{
+    width: 160px;
+    height: 35px;
+    font-size: 0.9rem;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.btnZmienStatus{
+    width: 160px;
+    height: 38px;
+    background-color: #ffcc33;
+    border: 1px solid black;
+    border-radius: 12px;
+    font-size: 1.1rem;
+}
+
+.btnZmienStatus:hover{
+    background-color: #e6b800;
+}
+
+@media (max-width: 767px) {
+    .kafelekZamowienie{
+        max-width: 100%;
+        border-radius: 25px;
+    }
+    
+    .statusZamowienia{
+        min-width: 150px;
+    }
+    
+    .miniSelect, .btnZmienStatus {
+        width: 140px;
+    }
+}
