@@ -108,7 +108,8 @@
 }
 
 .zmienIlosc{
-    background: none;
+    background: #FFD24D;
+    border-radius: 20%;
     border: 1px solid black;
     cursor: pointer;
     margin-left: 5px;
