@@ -17,7 +17,7 @@
 }
 .btnAdminPanel:hover{
     background-color: #f0c02f;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 @media (max-width: 767px) {
@@ -69,6 +69,7 @@ select.inputLogRej {
     border-radius: 12px;
     box-sizing: border-box; 
 }
+
 .ramkaRola select {
     border: 2px solid black;
     border-radius: 12px;
@@ -220,13 +221,14 @@ select.inputLogRej {
     width: 160px;
     height: 38px;
     background-color: #ffcc33;
-    border: 1px solid black;
+    border: 2px solid black;
     border-radius: 12px;
     font-size: 1.1rem;
 }
 
 .btnZmienStatus:hover{
     background-color: #e6b800;
+    border: 2px solid black;
 }
 
 @media (max-width: 767px) {
