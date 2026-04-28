@@ -1,3 +1,4 @@
+<?php session_start(); // Rozpoczęcie sesji, aby widzieć komunikaty ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -46,17 +47,18 @@
                             <label>Powtórz hasło:</label>
                             <input type="password" name="hasloPow" class="inputLogRej">
                         </div>
-                        <?php 
-                        if(isset($_SESSION['blad'])) {
-                            echo '<div class="alert alert-danger py-1" style="font-size: 14px;">'.$_SESSION['blad'].'</div>';
-                            unset($_SESSION['blad']); // Usuń po wyświetleniu
-                        }
-                        if(isset($_SESSION['sukces'])) {
-                            echo '<div class="alert alert-success py-1" style="font-size: 14px;">'.$_SESSION['sukces'].'</div>';
-                            unset($_SESSION['sukces']);
-                        }
-                        ?>
-
+                            <?php 
+                                 if(isset($_SESSION['komunikat'])) {
+                                    $typ = $_SESSION['typ_komunikatu'];
+                                    echo '<div class="alert alert-'.$typ.' py-1 text-center komunikatLogRej">';
+                                    echo $_SESSION['komunikat'];
+                                    echo '</div>';
+                
+                                    // usuwanie komunikatu po odswierzeniu
+                                    unset($_SESSION['komunikat']);
+                                    unset($_SESSION['typ_komunikatu']);
+                                    }
+                            ?>
                         <button type="submit" class="btnLogRej">Zarejestruj</button>
                     </form>
                 </div>
