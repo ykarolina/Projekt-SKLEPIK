@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $spr->bind_param("ss", $email, $nazwa);
     $spr->execute();
     if ($spr->get_result()->num_rows > 0) {
-        wroc_z_bledem("Taki uzytkownik lub e-mail już istnieje!");
+        wroc_z_bledem("Taki uzytkownik lub e-mail juz istnieje!");
     }
 
     //haszowanie

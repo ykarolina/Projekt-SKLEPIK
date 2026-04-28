@@ -27,7 +27,7 @@
                 <h2 class="tytulLogRej">Zaloguj sie</h2>
                 
                 <div class="ramkaLogRej">
-                    <form>
+                    <form action="../skrypty/logowanie.php" method="POST">
                         <div class="labelLogRej">
                             <label>Email:</label>
                             <input type="email" name="email" class="inputLogRej">
@@ -38,7 +38,7 @@
                             <input type="password" name="haslo" class="inputLogRej">
                         </div>
                         <?php if(isset($_SESSION['komunikat'])): ?>
-                            <div class="alert alert-<?php echo $_SESSION['typ_komunikatu']; ?> py-1 text-center" style="font-size: 14px; margin-top: 10px;">
+                            <div class="alert alert-<?php echo $_SESSION['typ_komunikatu']; ?> py-1 text-center komunikatLogRej">
                                 <?php 
                                     echo $_SESSION['komunikat']; 
                                     unset($_SESSION['komunikat']);
