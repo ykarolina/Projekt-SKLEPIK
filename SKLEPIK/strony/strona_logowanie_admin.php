@@ -28,10 +28,10 @@
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="ramkaLogRej">
-                <form>
+                <form action="../skrypty/logowanie_admin.php" method="POST">
                     <div class="labelLogRej">
                         <label>Nazwa:</label>
-                        <input type="text" name="nazwaAdmim" class="inputLogRej">
+                        <input type="text" name="nazwaAdmin" class="inputLogRej">
                     </div>
                     <div class="labelLogRej">
                         <label>Kod dostepu:</label>
@@ -39,10 +39,10 @@
                     </div>
                     <div class="labelLogRej">
                         <label>Hasło:</label>
-                        <input type="password" name="haslo" class="inputLogRej">
+                        <input type="password" name="hasloAdmin" class="inputLogRej">
                     </div>
                     <?php if(isset($_SESSION['komunikat'])): ?>
-            <div class="alert alert-danger py-1 text-center" style="font-size: 14px;">
+            <div class="alert alert-danger py-1 text-center komunikatLogRej">
                 <?php echo $_SESSION['komunikat']; unset($_SESSION['komunikat']); ?>
             </div>
         <?php endif; ?>
