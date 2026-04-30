@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>  
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -78,7 +81,18 @@
         <div class="col-12 col-md-6 col-lg-5 ps-lg-5">
             <div class="ramka p-3 p-sm-4 mx-auto" style="max-width: 450px;">
                 <h2 class="tytulPanel fs-4 mb-4 text-center">ZMIANA ROLI UZYTKOWIKA</h2>
-                <form class="d-flex flex-column gap-3">
+                <?php 
+                if(isset($_SESSION['komunikat'])): ?>
+                    <div class="alert alert-<?php echo $_SESSION['typ_komunikatu']; ?> alert-sm p-1 text-center" style="font-size: 0.8rem;">
+                        <?php 
+                            echo $_SESSION['komunikat']; 
+                            unset($_SESSION['komunikat']); // Usuwa komunikat po wyświetleniu
+                            unset($_SESSION['typ_komunikatu']);
+                        ?>
+                    </div>
+                <?php endif; ?>
+
+                <form action="../skrypty/zmiana_roli.php" method="POST" class="d-flex flex-column gap-3">
 
                     <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-center gap-2">
                         <label class="mb-0 text-center text-lg-start">nazwa uzytkownika:</label>
@@ -93,7 +107,7 @@
                                 <option value="admin">admin</option>
                             </select>
                         </div>
-                        
+
                         <button type="submit" class="btnAdminPanel px-3 mb-0 w-100 w-lg-auto"> zmien role</button>
                     </div>
                 </form>

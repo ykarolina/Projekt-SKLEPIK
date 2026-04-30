@@ -38,8 +38,12 @@ if ($wynik->num_rows > 0) {
                 <span class="btnKwadrat">✖</span>
             </a>
             <span class="dane">
-                <?php echo $i++; ?>. <?php echo htmlspecialchars($uzytkownik['nazwa']); ?> 
-                rola:<?php echo htmlspecialchars($uzytkownik['rola']); ?>
+                <?php 
+                echo $i++ . ". ";  
+                echo htmlspecialchars($uzytkownik['nazwa']) . "|";
+                echo "rola: ";
+                echo htmlspecialchars($uzytkownik['rola']); 
+                ?>
             </span>
         </div>
         <?php
