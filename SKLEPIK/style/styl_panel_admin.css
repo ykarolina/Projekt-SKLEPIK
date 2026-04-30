@@ -293,4 +293,8 @@ select.inputLogRej {
         height: 32px;
         font-size: 0.9rem;
     }
+    .btnZmienRole{
+        font-size: 4.1vw;
+        padding: 2px;
+    }
 }

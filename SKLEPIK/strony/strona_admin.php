@@ -81,13 +81,12 @@
         <div class="col-12 col-md-6 col-lg-5 ps-lg-5">
             <div class="ramka p-3 p-sm-4 mx-auto" style="max-width: 450px;">
                 <h2 class="tytulPanel fs-4 mb-4 text-center">ZMIANA ROLI UZYTKOWIKA</h2>
-                <?php 
-                if(isset($_SESSION['komunikat'])): ?>
-                    <div class="alert alert-<?php echo $_SESSION['typ_komunikatu']; ?> alert-sm p-1 text-center" style="font-size: 0.8rem;">
+                <?php if(isset($_SESSION['komunikat_rola'])): ?>
+                    <div class="alert alert-<?php echo $_SESSION['typ_komunikatu_rola']; ?> alert-sm p-1 text-center" style="font-size: 0.8rem;">
                         <?php 
-                            echo $_SESSION['komunikat']; 
-                            unset($_SESSION['komunikat']); // Usuwa komunikat po wyświetleniu
-                            unset($_SESSION['typ_komunikatu']);
+                            echo $_SESSION['komunikat_rola']; 
+                            unset($_SESSION['komunikat_rola']); 
+                            unset($_SESSION['typ_komunikatu_rola']);
                         ?>
                     </div>
                 <?php endif; ?>
@@ -108,7 +107,7 @@
                             </select>
                         </div>
 
-                        <button type="submit" class="btnAdminPanel px-3 mb-0 w-100 w-lg-auto"> zmien role</button>
+                        <button type="submit" class="btnAdminPanel btnZmienRole px-3 mb-0 w-100 w-lg-auto"> zmien role</button>
                     </div>
                 </form>
             </div>
@@ -116,13 +115,22 @@
     </div>
 </section>
 
-
 <section class="dodajProdukt container mt-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8 d-flex justify-content-center">
             <div class="ramka p-4 w-100">
                 <h2 class="tytulPanel fs-3 mb-4 text-center">DODAJ PRODUKT</h2>
-                <form>
+                    <?php if(isset($_SESSION['komunikat_produkt'])): ?>
+                    <div class="alert alert-<?php echo $_SESSION['typ_komunikatu_produkt']; ?> alert-sm p-2 text-center mb-4" style="font-size: 0.9rem;">
+                        <?php 
+                            echo $_SESSION['komunikat_produkt']; 
+                            unset($_SESSION['komunikat_produkt']); 
+                            unset($_SESSION['typ_komunikatu_produkt']);
+                        ?>
+                    </div>
+                <?php endif; ?>
+
+                <form action="../skrypty/dodawanie_produktu.php" method="POST">
                     <div class="row px-md-4 mb-3">
                         <div class="col-md-6 mb-3 mb-md-0">
                             <label class="d-block mb-1">Nazwa:</label>
@@ -131,8 +139,11 @@
                         <div class="col-md-6">
                             <label class="d-block mb-1">Kategoria:</label>
                             <select name="kategoria" class="inputAdmin w-100">
-                                <option value="kawa">Kawa</option>
-                                <option value="jedzenie">Jedzenie</option>
+                                <option value="kawa">kawa</option>
+                                <option value="napoje">napoje</option>
+                                <option value="bulki">bulki</option>
+                                <option value="na_cieplo">na cieplo</option>
+                                <option value="inne">inne</option>
                             </select>
                         </div>
                     </div>
@@ -144,7 +155,7 @@
                         </div>
                         <div class="col-md-6">
                             <label class="d-block mb-1">Cena:</label>
-                            <input type="number" step="0.01" name="cena" class="inputAdmin w-100">
+                            <input type="number" step="0.01" name="cena" max="100" class="inputAdmin w-100">
                         </div>
                     </div>
 
@@ -161,7 +172,7 @@
 
                         <div class="d-flex align-items-center gap-2 ms-auto me-2 me-md-4">
                             <label class="mb-0 AdminSmak">smak (opcjonalnie)</label>
-                            <input type="text" name="foto" class="inputAdmin w-75">
+                            <input type="text" name="smak" class="inputAdmin w-75">
                         </div>
                     </div>
                     <div class="text-center">
