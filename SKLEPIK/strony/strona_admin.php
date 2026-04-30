@@ -50,15 +50,7 @@
                 <div class="col-4 col-md-auto p-1 d-flex justify-content-center">
                     <button type="button" class="btn btnAdminPanel">lista uzytkowników</button>
                 </div>
-                <section class="container mt-5">
-    <div class="row justify-content-center">
-        <div class="col-12 col-md-10">
-            <div class="ramka p-4">
-                <?php include 'sciezka/do/admin_lista_users.php'; ?>
-            </div>
-        </div>
-    </div>
-</section>
+              
                 <div class="col-4 col-md-auto p-1 d-flex justify-content-center">
                     <button type="button" class="btn btnAdminPanel">zmiana ról</button>
                 </div>
@@ -76,25 +68,33 @@
         </div>
         </div>
       </section>
-     <section class="zmianaRol container mt-5">
-    <div class="row"> <div class="col-12 col-md-10 col-lg-9 ms-auto d-flex justify-content-md-end">
-            <div class="ramka p-4">
-                <h2 class="tytulPanel fs-3 mb-4 text-center">ZMIANA ROLI UZYTKOWIKA</h2>
-                <form>
-                    <div class="d-flex align-items-center justify-content-center mb-3 flex-wrap gap-3">
-                        <label>nazwa uzytkownika:</label>
-                        <input type="text" name="nazwaUzytkownika" class="inputAdmin">
+    <section class="zmianaRol container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-5 col-lg-5 pe-lg-5 mb-5 mb-md-0">
+            <div class="listaUserAdmin">
+                <?php include '../skrypty/admin_lista_users.php'; ?>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 ps-lg-5">
+            <div class="ramka p-3 p-sm-4 mx-auto" style="max-width: 450px;">
+                <h2 class="tytulPanel fs-4 mb-4 text-center">ZMIANA ROLI UZYTKOWIKA</h2>
+                <form class="d-flex flex-column gap-3">
+
+                    <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-center gap-2">
+                        <label class="mb-0 text-center text-lg-start">nazwa uzytkownika:</label>
+                        <input type="text" name="nazwaUzytkownika" class="inputAdmin w-100 w-lg-auto" style="max-width: 210px;">
                     </div>
 
-                    <div class="d-flex align-items-center justify-content-center flex-wrap gap-4">
+                    <div class="d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between gap-4">
                         <div class="d-flex align-items-center gap-2">
-                            <label>rola:</label>
-                            <select name="rola" class="py-1 inputAdmin w-100">
+                            <label class="mb-0">rola:</label>
+                            <select name="rola" class="py-1 inputAdmin" style="width: 100px; height: 45px;">
                                 <option value="user">user</option>
                                 <option value="admin">admin</option>
                             </select>
                         </div>
-                        <button type="submit" class="btnAdminPanel px-4 w-auto">zmien role</button>
+                        
+                        <button type="submit" class="btnAdminPanel px-3 mb-0 w-100 w-lg-auto"> zmien role</button>
                     </div>
                 </form>
             </div>

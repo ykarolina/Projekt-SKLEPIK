@@ -245,3 +245,52 @@ select.inputLogRej {
         width: 140px;
     }
 }
+/*================styl z php lista uzytkownikow*/
+.listaUser{
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #222;
+}
+
+.user{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    gap: 12px;
+}
+
+.btnUsunUser{
+    text-decoration: none;
+}
+
+.btnKwadrat{
+    background-color: #8B0000;
+    color: white;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #000;
+    border-radius: 8px;
+    font-size: 1.2rem;
+}
+
+.btnKwadrat:hover{
+    background-color: #720000;
+}
+
+.dane{
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 768px) {
+    .listaUser{
+        font-size: 1.1rem;
+    }
+    .btnKwadrat{
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+    }
+}
