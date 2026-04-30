@@ -1,7 +1,4 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
-    session_start(); 
-}
 
 $serwer = "localhost";
 $uzytkownik_db = "root";
@@ -14,16 +11,16 @@ if ($polaczenie->connect_error) {
     die("Błąd połączenia: " . $polaczenie->connect_error);
 }
 
-// 1. SPRAWDZAMY WYBRANĄ KATEGORIĘ
+//sprawdzanie wybranej kategori
 $wybrana_kat = isset($_POST['filtr_kategorii']) ? $_POST['filtr_kategorii'] : 'wszystkie';
 
-// 2. MODYFIKUJEMY ZAPYTANIE SQL W ZALEŻNOŚCI OD WYBORU
+//modyfikacje pod kategorie zapytania i sortowanie wzgledem kategori
 if ($wybrana_kat === 'wszystkie') {
-    $sql = "SELECT id, nazwa, cena, smak, czy_promocja FROM produkty ORDER BY id DESC";
+    $sql = "SELECT id, nazwa, cena, smak, czy_promocja, zdjecie FROM produkty ORDER BY id ASC";
     $wynik = $polaczenie->query($sql);
 } else {
-    // Filtrowanie po konkretnej kategorii
-    $sql = "SELECT id, nazwa, cena, smak, czy_promocja FROM produkty WHERE kategoria = ? ORDER BY id DESC";
+    //jesli zadna kategoria to rosnaco wzdgledem id
+    $sql = "SELECT id, nazwa, cena, smak, czy_promocja, zdjecie FROM produkty WHERE kategoria = ? ORDER BY id DESC";
     $stmt = $polaczenie->prepare($sql);
     $stmt->bind_param("s", $wybrana_kat);
     $stmt->execute();
@@ -33,8 +30,10 @@ if ($wybrana_kat === 'wszystkie') {
 // Wyświetlanie listy
 if ($wynik && $wynik->num_rows > 0) {
     while ($produkt = $wynik->fetch_assoc()) {
-        $promocja = ($produkt['czy_promocja'] == 1) ? "na promocji" : "brak promocji";
-        $smak = !empty($produkt['smak']) ? " | " . htmlspecialchars($produkt['smak']) : "";
+        // Formułowanie tekstowych informacji o produkcie
+        $promocja = ($produkt['czy_promocja'] == 1) ? "PROMOCJA" : "bez promocji";
+        $smak = !empty($produkt['smak']) ?  htmlspecialchars($produkt['smak']) . " | " : "";
+        $foto_tekst = !empty($produkt['zdjecie']) ? htmlspecialchars($produkt['zdjecie']) : " | brak zdjecia";
 
         ?>
         <div class="user">
@@ -45,22 +44,21 @@ if ($wynik && $wynik->num_rows > 0) {
             </form>
             <span class="dane">
                 <?php
-                // Dodano #id - niezbędne dla administratora do edycji
-                echo $produkt['id'];
-                echo " | ";
+                echo $produkt['id'] . ". ";
                 echo htmlspecialchars($produkt['nazwa']) . " | ";
                 echo number_format($produkt['cena'], 2) . " zł";
-                echo $smak . " | " . $promocja;
+                echo " | " ;
+                echo $smak . $foto_tekst . " | " . $promocja;
                 ?>
             </span>
         </div>
         <?php
     }
 } else {
-    echo '<p class="mt-2">Brak produktów w kategorii: ' . htmlspecialchars($wybrana_kat) . '</p>';
+    echo '<p class="mt-2">Brak produktow w kategorii: ' . htmlspecialchars($wybrana_kat) . '</p>';
 }
 
-// Wyświetlanie komunikatu (jeśli istnieje) pod listą
+// Wyświetlanie komunikatu
 if (isset($_SESSION['komunikat_edycja'])) {
     echo '<div class="alert alert-' . $_SESSION['typ_komunikatu_edycja'] . ' mt-3" style="font-size: 0.9rem; padding: 10px;">';
     echo $_SESSION['komunikat_edycja'];

@@ -194,6 +194,7 @@
                 <h4 class="mb-1">kategoria:</h4>
                 <form method="POST" action="" class="w-100 d-flex flex-column align-items-center align-items-md-start">
                     <select name="filtr_kategorii" class="inputAdmin w-50 py-1 h-25" onchange="this.form.submit()">
+                        <!--filtrowanie kategori !-->
                         <?php
                         $kat = $_POST['filtr_kategorii'] ?? 'wszystkie';
                         ?>
@@ -205,17 +206,18 @@
                         <option value="inne" <?php if($kat == 'inne') echo 'selected'; ?>>inne</option>
                     </select>
                 </form>
-
-                <?php
-                if (isset($_SESSION['komunikat_edycja'])) {
-                    echo '<div class="alert alert-' . $_SESSION['typ_komunikatu_edycja'] . '  m-3" style="font-size: 0.9rem; padding: 10px;">';
-                    echo $_SESSION['komunikat_edycja'];
-                    echo '</div>';
-                    unset($_SESSION['komunikat_edycja']);
-                    unset($_SESSION['typ_komunikatu_edycja']);
-                }
-                ?>
-                <div class="w-100 mt-4 produktyLista">
+                <div class="w-100"> 
+                    <?php
+                    if (isset($_SESSION['komunikat_edycja'])) {
+                        echo '<div class="alert alert-' . $_SESSION['typ_komunikatu_edycja'] . ' mt-2 mb-2" style="font-size: 0.9rem; padding: 8px;">';
+                        echo $_SESSION['komunikat_edycja'];
+                        echo '</div>';
+                        unset($_SESSION['komunikat_edycja']);
+                        unset($_SESSION['typ_komunikatu_edycja']);
+                    }
+                    ?>
+                </div>
+                <div class="w-100 mt-1 produktyLista">
                     <?php include '../skrypty/wyswietlanie_produktow.php'; ?>
                 </div>
             </div>
@@ -224,7 +226,6 @@
         <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-end ms-auto">
             <div class="ramka p-4 p-lg-5 w-100"> 
                 <h2 class="tytulPanel fs-3 mb-4 text-center">EDYTOWANIE PRODUKTU</h2>
-                <!-- DODANO: action i method -->
                 <form action="../skrypty/edytowanie_produktu.php" method="POST" class="d-flex flex-column gap-2">
                     <div class="row g-2"> 
                         <div class="col-md-6 mb-2">
@@ -238,6 +239,8 @@
                                 <option value="cena">cena</option>
                                 <option value="smak">smak</option>
                                 <option value="kategoria">kategoria</option>
+                                <option value="zdjecie">nazwa pliku zdjęcia</option>
+                                <option value="czy_promocja">promocja (0 -brak lub 1-promo)</option>
                             </select>
                         </div>
                     </div>
@@ -247,7 +250,7 @@
                             <input type="text" name="nowaWartosc" class="inputAdmin w-100">
                         </div>
                         <div class="col-md-6 mb-2">
-                            <button type="submit" name="aktualizuj_produkt" class="btnAdminPanel w-100">zaktualizuj</button>
+                            <button type="submit" name="aktualizuj_produkt" class="btnAdminPanel btnZmienRole w-100">zaktualizuj</button>
                         </div>
                     </div>
                 </form>
