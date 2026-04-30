@@ -298,3 +298,9 @@ select.inputLogRej {
         padding: 2px;
     }
 }
+.produktyLista{
+    max-height: 190px;       /* Maksymalna wysokość ramki */
+    overflow-y: auto;        /* Pojawi się pasek przewijania, gdy produktów będzie dużo */
+    overflow-x: hidden;      /* Zablokuj przewijanie na boki */
+    padding-right: 10px;     /* Miejsce na pasek przewijania, by nie zasłaniał iksów */
+}
