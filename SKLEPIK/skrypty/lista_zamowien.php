@@ -36,7 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['akcja_status'])) {
 
 // 2. Wyświetlanie komunikatu (wąski pasek nad listą)
 if(isset($_SESSION['komunikat_zamowienie'])): ?>
-    <div class="alert alert-<?php echo $_SESSION['typ_komunikatu_zamowienie']; ?> fade show text-center mb-4 mx-auto">
+    <div class="alert alert-<?php echo $_SESSION['typ_komunikatu_zamowienie']; ?> fade show w-75 text-center mb-4 mx-auto">
         <strong><?php echo $_SESSION['komunikat_zamowienie']; ?></strong>
         <?php 
         //usuwanie komunikatu
@@ -75,7 +75,7 @@ if ($wynik_zamowienia->num_rows > 0) {
             }
             echo '</div>';
         }
-        echo '</div>'; //koniec kontenerProduktow
+        echo '</div>'; //koniec kontener poduktow
 
         //form zmiany statusu
         echo '<div class="statusZamowienia">';

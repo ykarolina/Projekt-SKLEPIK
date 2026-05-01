@@ -73,6 +73,12 @@
 </div>
         </div>
       </section>
+      <!-- <section id="sekcjaPowitalna" class="container powitanie mt-5 text-center">
+    <div class="ramka p-5">
+        <h1 class="tytulPanel">Witaj w panelu administratora</h1>
+        <p class="fs-5">Wybierz operacje, która chcesz wykonac z menu powyzej.</p>
+    </div>
+</section> -->
     <section class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-5 col-lg-5 pe-lg-5 mb-5 mb-md-0">

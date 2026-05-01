@@ -45,7 +45,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['rola'] = 'admin';
 
             //przełoczenie na strone admina
-            header("Location: ../strony/strona_admin.html");
+            header("Location: ../strony/strona_admin.php");
             exit;
             
         } else {

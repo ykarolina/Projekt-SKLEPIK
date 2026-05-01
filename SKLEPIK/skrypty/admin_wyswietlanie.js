@@ -1,5 +1,4 @@
-document.addEventListener('DOMContentLoaded', function() {
-    //pobieranie sekcji 
+//pobieranie sekcji 
     const sekcjaUzytkownicy = document.querySelector('.listaUzytkownikow')
     const sekcjaZmianaRol = document.querySelector('.zmianaRol');
     const sekcjaDodawanie = document.querySelector('.dodajProdukt');
@@ -43,4 +42,3 @@ document.addEventListener('DOMContentLoaded', function() {
         ukryjWszystkieSekcje();
         sekcjaZamowienia.style.display = 'block';
     });
-});

@@ -303,11 +303,11 @@ select.inputLogRej {
    overflow-y: auto; 
    overflow-x: hidden;
 }
-.alert{
+/* .alertlista{
     max-width: 450px; 
     font-size: 0.9rem; 
     padding: 10px;
-}
+} */
 .listaZamowienScroll{
     max-height: 400px; 
     overflow-y: auto; 
@@ -315,3 +315,18 @@ select.inputLogRej {
     width: fit-content; 
     max-width: 100%;
 }
+.listaUzytkownikow{
+   max-height: 220px; 
+    overflow-y: auto; 
+    padding-right: 15px; 
+    width: fit-content; 
+    max-width: 100%; 
+}
+.produktyLista{
+     max-height: 220px; 
+    overflow-y: auto; 
+    padding-right: 15px; 
+    width: fit-content; 
+    max-width: 100%; 
+}
+
