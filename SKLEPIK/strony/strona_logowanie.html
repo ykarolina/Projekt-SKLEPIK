@@ -39,14 +39,6 @@
                         </div>
                         <?php if(isset($_SESSION['komunikat'])): ?>
                             <div class="alert alert-<?php echo $_SESSION['typ_komunikatu']; ?> py-1 text-center" style="font-size: 14px; margin-top: 10px;">
-                                <?php 
-                                    echo $_SESSION['komunikat']; 
-                                    unset($_SESSION['komunikat']);
-                                    unset($_SESSION['typ_komunikatu']);
-                                ?>
-                            </div>
-                        <?php endif; ?>
-
                         <button type="submit" class="btnLogRej">Zaloguj</button>
                     </form>
                 </div>

@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -41,11 +40,6 @@
                         <label>Hasło:</label>
                         <input type="password" name="haslo" class="inputLogRej">
                     </div>
-                    <?php if(isset($_SESSION['komunikat'])): ?>
-            <div class="alert alert-danger py-1 text-center" style="font-size: 14px;">
-                <?php echo $_SESSION['komunikat']; unset($_SESSION['komunikat']); ?>
-            </div>
-        <?php endif; ?>
                     <button type="submit" class="btnLogRej">Zaloguj</button>
                 </form>
             </div>

@@ -46,17 +46,6 @@
                             <label>Powtórz hasło:</label>
                             <input type="password" name="hasloPow" class="inputLogRej">
                         </div>
-                        <?php 
-                        if(isset($_SESSION['blad'])) {
-                            echo '<div class="alert alert-danger py-1" style="font-size: 14px;">'.$_SESSION['blad'].'</div>';
-                            unset($_SESSION['blad']); // Usuń po wyświetleniu
-                        }
-                        if(isset($_SESSION['sukces'])) {
-                            echo '<div class="alert alert-success py-1" style="font-size: 14px;">'.$_SESSION['sukces'].'</div>';
-                            unset($_SESSION['sukces']);
-                        }
-                        ?>
-
                         <button type="submit" class="btnLogRej">Zarejestruj</button>
                     </form>
                 </div>
