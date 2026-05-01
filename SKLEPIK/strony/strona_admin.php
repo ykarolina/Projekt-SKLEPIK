@@ -49,36 +49,41 @@
         </div>
 
         <div class="col-12">
-            <div class="row g-2 justify-content-center">
-                <div class="col-4 col-md-auto p-1 d-flex justify-content-center">
-                    <button type="button" class="btn btnAdminPanel">lista uzytkowników</button>
-                </div>
-              
-                <div class="col-4 col-md-auto p-1 d-flex justify-content-center">
-                    <button type="button" class="btn btnAdminPanel">zmiana ról</button>
-                </div>
-                <div class="col-4 col-md-auto p-1 d-flex justify-content-center">
-                    <button type="button" class="btn btnAdminPanel">dodawanie produktu</button>
-                </div>
-
-                <div class="col-6 col-md-auto p-1 d-flex justify-content-center">
-                    <button type="button" class="btn btnAdminPanel">edycja i usuwanie produktów</button>
-                </div>
-                <div class="col-6 col-md-auto p-1 d-flex justify-content-center">
-                    <button type="button" class="btn btnAdminPanel">lista zamówien</button>
-                </div>
-            </div>
+    <div class="row g-2 justify-content-center">
+        <div class="col-4 col-md-auto p-1 d-flex justify-content-center">
+            <button type="button" id="btnListaUzytkownikow" class="btn btnAdminPanel">lista uzytkowników</button>
         </div>
+      
+        <div class="col-4 col-md-auto p-1 d-flex justify-content-center">
+            <button type="button" id="btnZmianaRol" class="btn btnAdminPanel">zmiana ról</button>
+        </div>
+
+        <div class="col-4 col-md-auto p-1 d-flex justify-content-center">
+            <button type="button" id="btnDodajProdukt" class="btn btnAdminPanel">dodawanie produktu</button>
+        </div>
+
+        <div class="col-6 col-md-auto p-1 d-flex justify-content-center">
+            <button type="button" id="btnEdycjaProduktow" class="btn btnAdminPanel">edycja i usuwanie produktów</button>
+        </div>
+
+        <div class="col-6 col-md-auto p-1 d-flex justify-content-center">
+            <button type="button" id="btnListaZamowien" class="btn btnAdminPanel">lista zamówien</button>
+        </div>
+    </div>
+</div>
         </div>
       </section>
-    <section class="zmianaRol container mt-5">
+    <section class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-5 col-lg-5 pe-lg-5 mb-5 mb-md-0">
+            <div class="listaUzytkownikow">
             <div class="listaUserAdmin">
                 <?php include '../skrypty/admin_lista_users.php'; ?>
             </div>
         </div>
+        </div>
         <div class="col-12 col-md-6 col-lg-5 ps-lg-5">
+            <div class="zmianaRol">
             <div class="ramka p-3 p-sm-4 mx-auto" style="max-width: 450px;">
                 <h2 class="tytulPanel fs-4 mb-4 text-center">ZMIANA ROLI UZYTKOWIKA</h2>
                 <?php if(isset($_SESSION['komunikat_rola'])): ?>
@@ -110,6 +115,7 @@
                         <button type="submit" class="btnAdminPanel btnZmienRole px-3 mb-0 w-100 w-lg-auto"> zmien role</button>
                     </div>
                 </form>
+            </div>
             </div>
         </div>
     </div>
@@ -344,5 +350,6 @@
         }
     </script>
 </footer>
+<script src="../skrypty/admin_wyswietlanie.js"></script>
 </body>
 </html>
