@@ -73,12 +73,12 @@
 </div>
         </div>
       </section>
-      <!-- <section id="sekcjaPowitalna" class="container powitanie mt-5 text-center">
+      <section id="sekcjaPowitalna" class="container powitanie mt-5 text-center">
     <div class="ramka p-5">
         <h1 class="tytulPanel">Witaj w panelu administratora</h1>
         <p class="fs-5">Wybierz operacje, która chcesz wykonac z menu powyzej.</p>
     </div>
-</section> -->
+</section>
     <section class="container mt-5">
     <div class="row justify-content-center">
         <div class="col-12 col-md-5 col-lg-5 pe-lg-5 mb-5 mb-md-0">
@@ -242,7 +242,7 @@
                     <div class="row g-2"> 
                         <div class="col-md-6 mb-2">
                             <label class="mb-1">Numer produktu:</label>
-                            <input type="text" name="nrProduktu" class="inputAdmin w-100">
+                            <input type="number" name="nrProduktu" class="inputAdmin w-100">
                         </div>
                         <div class="col-md-6 mb-2">
                             <label class="mb-1">edytuj pole:</label>
@@ -357,5 +357,6 @@
     </script>
 </footer>
 <script src="../skrypty/admin_wyswietlanie.js"></script>
+
 </body>
 </html>

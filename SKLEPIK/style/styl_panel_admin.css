@@ -323,7 +323,7 @@ select.inputLogRej {
     max-width: 100%; 
 }
 .produktyLista{
-     max-height: 220px; 
+    max-height: 185px; 
     overflow-y: auto; 
     padding-right: 15px; 
     width: fit-content; 

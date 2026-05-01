@@ -1,5 +1,7 @@
 <?php
-//polaczenie
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 $serwer = "localhost";
 $uzytkownik_db = "root";
 $haslo_db = "";
@@ -14,9 +16,23 @@ if ($polaczenie->connect_error) {
 // usuwanie uzytkownika
 if (isset($_GET['usun_uzytkownika'])) {
     $id = intval($_GET['usun_uzytkownika']);
+
+    //usuwnie pozycji zamowionych aby uniknac bledy foreing key
+    $usun_pozycje = $polaczenie->prepare("DELETE FROM pozycje_zamowione WHERE id_zamowienia IN (SELECT id FROM zamowienia WHERE id_uzytkownika = ?)");
+    $usun_pozycje->bind_param("i", $id);
+    $usun_pozycje->execute();
+
+    //usuwanie zamowien
+    $usun_zamowienia = $polaczenie->prepare("DELETE FROM zamowienia WHERE id_uzytkownika = ?");
+    $usun_zamowienia->bind_param("i", $id);
+    $usun_zamowienia->execute();
+
+    //usuwanie uzytkownika
     $zapytanie = $polaczenie->prepare("DELETE FROM uzytkownicy WHERE id = ?");
     $zapytanie->bind_param("i", $id);
     $zapytanie->execute();
+    
+    $_SESSION['aktywna_sekcja'] = 'lista';
     
     header("Location: ../strony/strona_admin.php");
     exit();
@@ -33,8 +49,7 @@ if ($wynik->num_rows > 0) {
     while ($uzytkownik = $wynik->fetch_assoc()) {
         ?>
         <div class="user">
-            <a href="?usun_uzytkownika=<?php echo $uzytkownik['id']; ?>" 
-               class="btnUsunUser" >
+            <a href="?usun_uzytkownika=<?php echo $uzytkownik['id']; ?>" class="btnUsunUser">
                 <span class="btnKwadrat">✖</span>
             </a>
             <span class="dane">
