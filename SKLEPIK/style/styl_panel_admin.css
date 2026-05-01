@@ -299,8 +299,19 @@ select.inputLogRej {
     }
 }
 .produktyLista{
-    max-height: 190px;       /* Maksymalna wysokość ramki */
-    overflow-y: auto;        /* Pojawi się pasek przewijania, gdy produktów będzie dużo */
-    overflow-x: hidden;      /* Zablokuj przewijanie na boki */
-    padding-right: 10px;     /* Miejsce na pasek przewijania, by nie zasłaniał iksów */
+   max-height: 400px; 
+   overflow-y: auto; 
+   overflow-x: hidden;
+}
+.alert{
+    max-width: 450px; 
+    font-size: 0.9rem; 
+    padding: 10px;
+}
+.listaZamowienScroll{
+    max-height: 400px; 
+    overflow-y: auto; 
+    padding-right: 15px; 
+    width: fit-content; 
+    max-width: 100%;
 }

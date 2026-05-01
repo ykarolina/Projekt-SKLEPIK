@@ -261,8 +261,8 @@
 
 <section class="sekcjaZamowienia container mt-5">
     <h1 class="tytulZamowien text-center mb-5">LISTA ZAMÓWIEN</h1>
-
-    <div class="kafelekZamowienie p-4 mb-5">
+        <?php include '../skrypty/lista_zamowien.php'; ?>
+    <!-- <div class="kafelekZamowienie p-4 mb-5">
         <h4 class="nazwaKlienta mb-4">nazwa uzytkownika</h4>
         <div class="d-flex flex-nowrap align-items-center gap-4">
             <div class="d-flex align-items-stretch gap-3 kontenerProduktow">
@@ -295,8 +295,8 @@
                     </div>
                     <p class="nazwaMiniProd">bułka z serem</p>
                 </div>
-            </div>
-
+            </div> -->
+<!-- 
             <div class="statusZamowienia">
                 <label>status zamówienia:</label>
                 <div class="statusKontener">
@@ -309,38 +309,9 @@
                 </div>
             </div>
           </div>
-            </div>
+            </div> -->
     
-    <div class="kafelekZamowienie p-4 mb-5">
-        <h4 class="nazwaKlienta mb-4">nazwa uzytkownika2</h4>
-        <div class="d-flex flex-nowrap align-items-center gap-4">
-            <div class="d-flex align-items-stretch gap-3 kontenerProduktow">
-                <div class="ramkaMiniZdj">
-                    <div class="divImg"><img src="../grafiki/bulki/bulka_ser.png" alt="zdj" class="imgZdjMini"></div>
-                    <p class="nazwaMiniProd">bułka z serem</p>
-                </div>
-                <div class="ramkaMiniZdj">
-                    <div class="d-flex flex-column align-items-center text-center">
-                        <img src="../grafiki/inne/mullermilch_truskawkowy.jpg" alt="zdj" class="imgZdjMini">
-                        <p class="nazwaMiniProd mb-0">Müllermilch</p>
-                        <p class="wariantProd text-muted">smak: truskawka</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="statusZamowienia">
-                <label>status zamówienia:</label>
-                <div class="statusKontener">
-                    <select class="inputAdmin miniSelect">
-                        <option value="oczekujace">oczekujace</option>
-                        <option value="realizacja">w realizacji</option>
-                        <option value="realizacja">zrealizowane</option>
-                    </select>
-                <button class="mt-2 p-1 btnAdminPanel btnZmienStatus">zmien status</button>
-                </div>
-            </div>
-        </div>
-    </div>
+    
 </section>
 </main>
    <footer class="stopka">
