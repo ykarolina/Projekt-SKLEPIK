@@ -32,8 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $wartosc_smaku = empty($smak) ? null : $smak;
 
     $zapytanie = $polaczenie->prepare("INSERT INTO produkty (nazwa, cena, zdjecie, kategoria, smak, czy_promocja) VALUES (?, ?, ?, ?, ?, ?)");
-    $zapytanie->bind_param("sdsssi", $nazwa_produktu, $cena, $zdjecie, $kategoria, $wartosc_smaku, $promocja);
-
+    $zapytanie->bind_param("sssssi", $nazwa_produktu, $cena, $zdjecie, $kategoria, $wartosc_smaku, $promocja);
     if ($zapytanie->execute()) {
         $_SESSION['komunikat_produkt'] = "Produkt <b>$nazwa_produktu</b> został dodany do bazy.";
         $_SESSION['typ_komunikatu_produkt'] = "success";

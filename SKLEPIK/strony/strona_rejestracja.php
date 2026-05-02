@@ -30,7 +30,7 @@
                     <form action="../skrypty/tworzenie_konta.php" method="POST" >
                          <div class="labelLogRej">
                             <label>Nazwa:</label>
-                            <input type="text" name="nazwa" class="inputLogRej">
+                            <input type="text" name="nazwa" maxlength="20" class="inputLogRej">
                         </div>
 
                         <div class="labelLogRej">

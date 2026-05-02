@@ -80,7 +80,7 @@
     height: 545px; 
     overflow-y: auto;
     overflow-x: hidden;
-    padding-right: 20px;
+    padding-right: 20px;    
     padding-bottom: 15px;
 }
 .daneUser{
@@ -98,13 +98,11 @@
         width: 100%;
         margin-top: 5px;
     }
-    
     .cenaHistoria{
         flex: 0 0 100px;
         font-size: 1.3rem;
         margin-right: 0px;
     }
-    
     .imgHistoria{
         width: 60px;
         height: 60px;
@@ -112,6 +110,9 @@
     .nazwaProduktuHistoria{
         margin-right: 5px;
     }
+    .zamowieniaHistoria{
+    height: 215px;
+}
      
 }
 @media screen and (min-width: 768px) and (max-width: 1024px){
@@ -131,7 +132,6 @@
         font-size: 2rem;
         margin-right: 0px;
     }
-    
     .imgHistoria{
         width: 80px;
         height: 80px;

@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['akcja_status'])) {
     exit();
 }
 
-// 2. Wyświetlanie komunikatu (wąski pasek nad listą)
+// komunikat
 if(isset($_SESSION['komunikat_zamowienie'])): ?>
     <div class="alert alert-<?php echo $_SESSION['typ_komunikatu_zamowienie']; ?> fade show w-75 text-center mb-4 mx-auto">
         <strong><?php echo $_SESSION['komunikat_zamowienie']; ?></strong>

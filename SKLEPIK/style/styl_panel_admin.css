@@ -60,6 +60,7 @@ select.inputLogRej {
     border: 2px solid #555;
     border-radius: 30px;
     margin-bottom: 20px;
+    margin-top: 0;
 }
 .inputAdmin{
     width: 300px;
@@ -297,6 +298,11 @@ select.inputLogRej {
         font-size: 4.1vw;
         padding: 2px;
     }
+    .alertUser{
+    font-size: 0.7rem; 
+    padding: 5px;
+    width: 240px;
+}
 }
 .produktyLista{
    max-height: 400px; 
@@ -329,4 +335,7 @@ select.inputLogRej {
     width: fit-content; 
     max-width: 100%; 
 }
-
+.alertUser{
+    font-size: 0.8rem; 
+    padding: 8px;
+}

@@ -30,9 +30,10 @@ if (isset($_GET['usun_uzytkownika'])) {
     //usuwanie uzytkownika
     $zapytanie = $polaczenie->prepare("DELETE FROM uzytkownicy WHERE id = ?");
     $zapytanie->bind_param("i", $id);
-    $zapytanie->execute();
-    
-    $_SESSION['aktywna_sekcja'] = 'lista';
+    if ($zapytanie->execute()) {
+        $_SESSION['komunikat_user'] = "Uzytkownik został pomyslnie usuniety.";
+        $_SESSION['typ_komunikatu_user'] = "success";
+    }
     
     header("Location: ../strony/strona_admin.php");
     exit();

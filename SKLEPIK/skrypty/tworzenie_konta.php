@@ -56,8 +56,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($insert->execute()) {
         $_SESSION['komunikat'] = "Konto zostało utworzone!";
         $_SESSION['typ_komunikatu'] = "success";
-        header("Location: ../strony/strona_rejestracja.php");
-        exit;
+        header("Location: ../strony/strona_logowanie.php");
+            exit;
     } else {
         wroc_z_bledem("Błąd bazy danych.");
     }

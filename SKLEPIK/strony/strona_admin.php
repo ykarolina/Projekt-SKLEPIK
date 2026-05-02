@@ -25,8 +25,7 @@
             <div class="kontener2">
                 <a href="strona_glowna.html"><img src="../grafiki/loga/logo_hot-dog.png" class="imgHeader"> Produkty</a> 
                 <a href="strona_koszyk.html"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
-                <a href="strona_konto.html"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"> Konto</a>
-               
+                <a href="strona_konto.php"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"> Konto</a>
             </div>
             <div class="menuTel" onclick="toggleMenu()">
                 <span></span>
@@ -42,7 +41,7 @@
         </nav>
     </header>
     <main class="strona">
-      <section class="container mt-5">
+      <section class="container mt-4">
         <div class="row justify-content-center">
         <div class="col-12 text-center mb-4">
             <h1 class="tytulAdmin">Panel administratora</h1>
@@ -73,15 +72,25 @@
 </div>
         </div>
       </section>
-      <section id="sekcjaPowitalna" class="container powitanie mt-5 text-center">
-    <div class="ramka p-5">
-        <h1 class="tytulPanel">Witaj w panelu administratora</h1>
+      <section id="sekcjaPowitalna" class="container powitanie mt-2 text-center">
+    <div class="p-0">
         <p class="fs-5">Wybierz operacje, która chcesz wykonac z menu powyzej.</p>
     </div>
 </section>
-    <section class="container mt-5">
+    <section class="container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-5 col-lg-5 pe-lg-5 mb-5 mb-md-0">
+            <div class="w-50"> 
+                    <?php
+                    if (isset($_SESSION['komunikat_user'])) {
+                        echo '<div class="alert alert-' . $_SESSION['typ_komunikatu_user'] . ' mt-2 mb-2 alertUser">';
+                        echo $_SESSION['komunikat_user'];
+                        echo '</div>';
+                        unset($_SESSION['komunikat_user']);
+                        unset($_SESSION['typ_komunikatu_user']);
+                    }
+                    ?>
+                </div>
             <div class="listaUzytkownikow">
             <div class="listaUserAdmin">
                 <?php include '../skrypty/admin_lista_users.php'; ?>
@@ -127,7 +136,7 @@
     </div>
 </section>
 
-<section class="dodajProdukt container mt-5">
+<section class="dodajProdukt container">
     <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8 d-flex justify-content-center">
             <div class="ramka p-4 w-100">
@@ -196,17 +205,16 @@
     </div>
 </section>
 
-<section class="sectionEdycja container mt-5">
-    <h1 class="tytulPanel fs-2 mb-5 text-center">EDYTUJ PRODUKT</h1>
+<section class="sectionEdycja container">
+    <h1 class="tytulPanel fs-1 text-center mb-3">EDYTUJ PRODUKT</h1>
     <div class="row gy-5 justify-content-center">
         
-        <div class="col-12 col-md-4 ps-md-5">
-            <h2 class="tytulPanel fs-3 mb-4 text-center">LISTA PRODUKTOW</h2>
-            <div class="d-flex flex-column align-items-center align-items-md-start">
+        <div class="col-12 col-md-4 ps-md-5 text-start">
+            <h2 class="tytulPanel fs-2 mb-1 text-center">LISTA PRODUKTOW</h2>
+            <div class="d-flex flex-column align-items-md-start">
                 <h4 class="mb-1">kategoria:</h4>
-                <form method="POST" action="" class="w-100 d-flex flex-column align-items-center align-items-md-start">
-                    <select name="filtr_kategorii" class="inputAdmin w-50 py-1 h-25" onchange="this.form.submit()">
-                        <!--filtrowanie kategori !-->
+                <form method="POST" action="" class="w-100 d-flex flex-column align-items-md-start">
+                    <select name="filtr_kategorii" class="inputAdmin w-50 py-1 h-25 mb-1" onchange="this.form.submit()">
                         <?php
                         $kat = $_POST['filtr_kategorii'] ?? 'wszystkie';
                         ?>
@@ -229,7 +237,7 @@
                     }
                     ?>
                 </div>
-                <div class="w-100 mt-1 produktyLista">
+                <div class="w-100 mt-2 produktyLista">
                     <?php include '../skrypty/wyswietlanie_produktow.php'; ?>
                 </div>
             </div>
@@ -237,7 +245,7 @@
 
         <div class="col-12 col-md-6 col-lg-5 d-flex justify-content-center justify-content-md-end ms-auto">
             <div class="ramka p-4 p-lg-5 w-100"> 
-                <h2 class="tytulPanel fs-3 mb-4 text-center">EDYTOWANIE PRODUKTU</h2>
+                <h2 class="tytulPanel fs-3 mb-1 text-center">EDYTOWANIE PRODUKTU</h2>
                 <form action="../skrypty/edytowanie_produktu.php" method="POST" class="d-flex flex-column gap-2">
                     <div class="row g-2"> 
                         <div class="col-md-6 mb-2">
@@ -271,7 +279,7 @@
     </div>
 </section>
 
-<section class="sekcjaZamowienia container mt-5">
+<section class="sekcjaZamowienia container mt-0">
     <h1 class="tytulZamowien text-center mb-5">LISTA ZAMÓWIEN</h1>
         <?php include '../skrypty/lista_zamowien.php'; ?>
     <!-- <div class="kafelekZamowienie p-4 mb-5">

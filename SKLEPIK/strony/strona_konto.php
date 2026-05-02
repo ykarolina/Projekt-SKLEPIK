@@ -25,8 +25,7 @@ include '../skrypty/konto.php'; // To musi być PIERWSZA linia
             <div class="kontener2">
                 <a href="strona_glowna.html"><img src="../grafiki/loga/logo_hot-dog.png" class="imgHeader"> Produkty</a> 
                 <a href="strona_koszyk.html"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
-                <a href="strona_logowanie_admin.html"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
-               
+                <a href="strona_logowanie_admin.php"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
             </div>
             <div class="menuTel" onclick="toggleMenu()">
                 <span></span>
@@ -94,9 +93,9 @@ include '../skrypty/konto.php'; // To musi być PIERWSZA linia
                 <?php endif; ?>
                 </div>
             </div>
-            <div class="col-12 col-xl-5 d-flex flex-column align-items-center align-items-xl-end mt-5 mt-xl-0">
+            <div class="col-12 col-xl-5 d-flex flex-column align-items-center align-items-xl-end mt-1 mt-xl-0">
                 <h1 class="twojeKonto">TWOJE KONTO</h1>
-                <div class="daneUzytkownika text-center text-xl-end">
+                <div class="daneUzytkownika text-center text-xl-center">
                     <p class="daneUser">Twoja nazwa: <?php echo htmlspecialchars($nazwa_user); ?></p>
                     <p class="daneUser">Twój mail to: <?php echo htmlspecialchars($mail_user); ?></p>
                 </div>
