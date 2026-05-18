@@ -15,6 +15,8 @@ include '../skrypty/konto.php'; // To musi być PIERWSZA linia
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/x-icon" href="../grafiki/loga/logo_zeg.png">
 </head>
 <body>
     <header class="banner">
@@ -23,7 +25,7 @@ include '../skrypty/konto.php'; // To musi być PIERWSZA linia
                 <img src="../grafiki/loga/zegowskaSzama_v2.png" class="logo">
             </div>
             <div class="kontener2">
-                <a href="strona_glowna.html"><img src="../grafiki/loga/logo_hot-dog.png" class="imgHeader"> Produkty</a> 
+                <a href="strona_glowna.html#oferta"><img src="../grafiki/loga/logo_hot-dog.png" class="imgHeader"> Produkty</a> 
                 <a href="strona_koszyk.html"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
                 <a href="strona_logowanie_admin.php"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
             </div>
@@ -35,7 +37,7 @@ include '../skrypty/konto.php'; // To musi być PIERWSZA linia
         </div>
 
         <nav class="navTel" id="mobileMenu">
-            <a href="strona_glowna.html"><img src="../grafiki/loga/logo_hot-dog.png" class="imgHeader"> Produkty</a> 
+            <a href="strona_glowna.html#oferta"><img src="../grafiki/loga/logo_hot-dog.png" class="imgHeader"> Produkty</a> 
             <a href="strona_koszyk.html"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
             <a href="strona_logowanie_admin.html"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
         </nav>
@@ -121,9 +123,9 @@ include '../skrypty/konto.php'; // To musi być PIERWSZA linia
             <div class="col-12 col-md-4 text-md-end media">
                 <span>Nasze media</span>
                 <div class="ikony">
-                    <a href="#"><img src="../grafiki/loga/logo_ig.png" alt="Instagram"></a>
-                    <a href="#"><img src="../grafiki/loga/logo_fb.png" alt="Facebook"></a>
-                    <a href="#"><img src="../grafiki/loga/logo_www.png" alt="WWW"></a>
+                    <a href="https://www.instagram.com/zegowska_szama/" target="_blank"><img src="../grafiki/loga/logo_ig.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/ZEG.ZS4.Tychy/?locale=pl_PL" target="_blank"><img src="../grafiki/loga/logo_fb.png" alt="Facebook"></a>
+                    <a href="https://www.zs4.oswiata.tychy.pl/" target="_blank"><img src="../grafiki/loga/logo_www.png" alt="WWW"></a>
                 </div>
             </div>
         </div>

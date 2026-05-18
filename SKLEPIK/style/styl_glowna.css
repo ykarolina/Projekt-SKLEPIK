@@ -25,7 +25,6 @@
     margin: 5px;
     width: 190;
     border-radius: 8px;
-    font-weight: 600;
     background-color: #970F06;
     color: white;
 }
@@ -34,7 +33,6 @@
     margin: 0px;
     margin-left: 25px;
     font-size: 25px;
-    font-weight: 800;
     width: 50%;
     text-align: left;
     color: black;
@@ -44,7 +42,6 @@
     margin: 0px;
     margin-left: 25px;
     font-size: 25px;
-    font-weight: 800;
     width: 5%;
     text-align: left;
     color: #970F06;
@@ -75,7 +72,6 @@
 .tekstGodziny{
     margin: 0px;
     font-size: 25px;
-    font-weight: 800;
     color: #970F06;
 }
 
@@ -90,7 +86,6 @@
 
 .hTekst{
     font-size: 55px;
-    font-weight: 900;
     color: black;
     text-align: center;
 }
@@ -99,7 +94,6 @@
     text-decoration: none;
     color: black;
     font-size: 35px;
-    font-weight: 900;
     margin-left: 25px;
     margin-right: 25px;
 }
@@ -134,11 +128,15 @@ a{
 }
 h1{
     font-size: 55px;
-    font-weight: 900;
+    /* font-weight: 900; */
     color: #970F06;
     margin: 20px 0px 20px 0px;
 }
 h2{
     font-size: 35px;
-    font-weight: 900;
+    /* font-weight: 900; */
+}
+
+.main{
+    margin-top: 50px;
 }

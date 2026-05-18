@@ -6,64 +6,83 @@
     <title>Zegowska Szama</title>
     <link rel="stylesheet" href="../style/styl_glowna.css">
     <link rel="stylesheet" href="../style/styl_header_footer.css">
-    <!-- <link rel="icon" type="image/x-icon" href="/grafiki/loga/logo_zeg.png"> -->
-     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../grafiki/loga/logo_zeg.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lilita+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <header class="banner">
-        <div class="logoDiv"><img src="../grafiki/loga/zegowskaSzama_v2.png" class="logo"></div>
-        <div class="kontener2">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+            <div class="logoDiv">
+                <img src="../grafiki/loga/zegowskaSzama_v2.png" class="logo">
+            </div>
+            <div class="kontener2">
+                <a href="strona_koszyk.html"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
+                <a href="strona_konto.php"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"> Konto</a>
+                <a href="strona_logowanie_admin.php"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
+            </div>
+            <div class="menuTel" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <nav class="navTel" id="mobileMenu">
             <a href="strona_koszyk.html"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
             <a href="strona_konto.php"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"> Konto</a>
-            <a href="#"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
-        </div>
+            <a href="strona_logowanie_admin.php"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
+        </nav>
     </header>
-    <main>
-        <section class="promo-Godziny">
-            <section class="promocje">
-                <h1>PROMOCJE!!!</h1>
-                <div class="sortProdukty">
-                    <div class="promoProdukt">
-                        <img src="../grafiki/bulki/bulka_szynka.png" class="zdjPromo">
-                        <div class="sortTekst">
-                            <p class="promoTekst">bułka z szynką</p>
-                            <p class="promoCena">2zł</p>
+    <main class="main">
+        <div class="container">
+            <section class="promo-Godziny">
+                <section class="promocje row">
+                    <h1>PROMOCJE!!!</h1>
+                    <div class="sortProdukty row">
+                        <div class="promoProdukt col">
+                            <img src="../grafiki/bulki/bulka_szynka.png" class="zdjPromo">
+                            <div class="sortTekst">
+                                <p class="promoTekst">bułka z szynką</p>
+                                <p class="promoCena">2zł</p>
+                            </div>
+                            <input type="button" value="dodaj do koszyka" class="btnPromo">
                         </div>
-                        <input type="button" value="dodaj do koszyka" class="btnPromo">
-                    </div>
-                    <div class="promoProdukt">
-                        <img src="../grafiki/kawy/espresso_macchiato.png" class="zdjPromo">
-                        <div class="sortTekst">
-                            <p class="promoTekst">esspresso machiato</p>
-                            <p class="promoCena">2zł</p>
+                        <div class="promoProdukt col">
+                            <img src="../grafiki/kawy/espresso_macchiato.png" class="zdjPromo">
+                            <div class="sortTekst">
+                                <p class="promoTekst">esspresso machiato</p>
+                                <p class="promoCena">2zł</p>
+                            </div>
+                            <input type="button" value="dodaj do koszyka" class="btnPromo">
                         </div>
-                        <input type="button" value="dodaj do koszyka" class="btnPromo">
-                    </div>
-                    <div class="promoProdukt">
-                        <img src="../grafiki/na_cieplo/hot_dog.jpg" class="zdjPromo">
-                        <div class="sortTekst">
-                            <p class="promoTekst">bułka z szynką</p>
-                            <p class="promoCena">2zł</p>
+                        <div class="promoProdukt col">
+                            <img src="../grafiki/na_cieplo/hot_dog.jpg" class="zdjPromo">
+                            <div class="sortTekst">
+                                <p class="promoTekst">bułka z szynką</p>
+                                <p class="promoCena">2zł</p>
+                            </div>
+                            <input type="button" value="dodaj do koszyka" class="btnPromo">
                         </div>
-                        <input type="button" value="dodaj do koszyka" class="btnPromo">
                     </div>
-                </div>
-            </section>
-            <aside class="godz_Otwarcia">
-                <h2>GODZINY <br> OTWARCIA</h2>
-                <div class="pGodziny">
-                    <p class="tekstGodziny">10.25 - 10.35</p>
-                    <p class="tekstGodziny">11.20 - 11.30</p>
-                    <p class="tekstGodziny">12.15 - 12.30</p>
-                    <p class="tekstGodziny">13.15 - 13.25</p>
-                    <p class="tekstGodziny">14.10 - 14.20</p>
-                </div>
-            </aside>
+                </section>
+                <aside class="godz_Otwarcia col">
+                    <h2>GODZINY <br> OTWARCIA</h2>
+                    <div class="pGodziny">
+                        <p class="tekstGodziny">10.25 - 10.35</p>
+                        <p class="tekstGodziny">11.20 - 11.30</p>
+                        <p class="tekstGodziny">12.15 - 12.30</p>
+                        <p class="tekstGodziny">13.15 - 13.25</p>
+                        <p class="tekstGodziny">14.10 - 14.20</p>
+                    </div>
+                </aside>
         </section>
-        <section class="oferta">
-            <h1 class="hTekst">NASZA OFERTA</h1>
+        <section class="oferta container">
+            <h1 class="hTekst" id="oferta">NASZA OFERTA</h1>
             <nav class="navOferta">
-                <div class="divOferta">
+                <div class="divOferta col">
                     <a href="#" class="navHref">kawa</a>
                     <a href="#" class="navHref">napoje</a>
                     <a href="#" class="navHref">bułki</a>
@@ -71,10 +90,63 @@
                     <a href="#" class="navHref">inne</a>
                 </div>
             </nav>
-        </section>
-    </main>
-    <footer class="informacje">
 
-    </footer>
+            <div class="container">
+                <div class="sortProdukty">
+                        <div class="promoProdukt col">
+                            <img src="../grafiki/bulki/bulka_szynka.png" class="zdjPromo">
+                            <div class="sortTekst">
+                                <p class="promoTekst">bułka z szynką</p>
+                                <p class="promoCena">2zł</p>
+                            </div>
+                            <input type="button" value="dodaj do koszyka" class="btnPromo">
+                        </div>
+                        <div class="promoProdukt col">
+                            <img src="../grafiki/kawy/espresso_macchiato.png" class="zdjPromo">
+                            <div class="sortTekst">
+                                <p class="promoTekst">esspresso machiato</p>
+                                <p class="promoCena">2zł</p>
+                            </div>
+                            <input type="button" value="dodaj do koszyka" class="btnPromo">
+                        </div>
+                        <div class="promoProdukt col">
+                            <img src="../grafiki/na_cieplo/hot_dog.jpg" class="zdjPromo">
+                            <div class="sortTekst">
+                                <p class="promoTekst">bułka z szynką</p>
+                                <p class="promoCena">2zł</p>
+                            </div>
+                            <input type="button" value="dodaj do koszyka" class="btnPromo">
+                        </div>
+                    </div>
+            </div>
+        </section>
+        </div>
+        
+    </main>
+    <footer class="stopka">
+    <div class="container">
+        <div class="row align-items-center gy-4 gy-md-0">
+            <div class="col-12 col-md-4 text-start dane">
+                <p><strong>Adres:</strong> al. Bielska 100, 43-100 Tychy</p>
+                <p><strong>Kontakt:</strong> 32 217 38 22</p>
+                <p><strong>Autorzy:</strong></p>
+            </div>
+
+            <div class="col-12 col-md-4 text-center zeg">
+                <img src="../grafiki/loga/logo_zeg.png" alt="Logo ZEG" class="logoZEG">
+                <p class="mb-0">Zespół Szkół nr 4 im. J. Groszkowskiego w Tychach</p>
+            </div>
+            
+            <div class="col-12 col-md-4 text-md-end media">
+                <span>Nasze media</span>
+                <div class="ikony">
+                    <a href="https://www.instagram.com/zegowska_szama/" target="_blank"><img src="../grafiki/loga/logo_ig.png" alt="Instagram"></a>
+                    <a href="https://www.facebook.com/ZEG.ZS4.Tychy/?locale=pl_PL" target="_blank"><img src="../grafiki/loga/logo_fb.png" alt="Facebook"></a>
+                    <a href="https://www.zs4.oswiata.tychy.pl/" target="_blank"><img src="../grafiki/loga/logo_www.png" alt="WWW"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
