@@ -31,7 +31,7 @@ if (isset($_GET['usun_uzytkownika'])) {
     $zapytanie = $polaczenie->prepare("DELETE FROM uzytkownicy WHERE id = ?");
     $zapytanie->bind_param("i", $id);
     if ($zapytanie->execute()) {
-        $_SESSION['komunikat_user'] = "Uzytkownik został pomyslnie usuniety.";
+        $_SESSION['komunikat_user'] = "Użytkownik został pomyślnie usunięty.";
         $_SESSION['typ_komunikatu_user'] = "success";
     }
     
@@ -43,7 +43,7 @@ $wynik = $polaczenie->query("SELECT id, nazwa, rola FROM uzytkownicy");
 
 //wyswietlanie listy
 echo '<div class="listaUser">';
-echo '<h2 class="tytulPanel fs-3 mb-4">lista uzytkowników</h2>';
+echo '<h2 class="tytulPanel fs-3 mb-4">lista użytkowników</h2>';
 
 if ($wynik->num_rows > 0) {
     $i = 1;

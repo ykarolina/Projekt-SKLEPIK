@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         wroc_z_bledem("Wypełnij wszystkie pola!");
     }
     if ($haslo !== $hasloPow) {
-        wroc_z_bledem("Hasła nie sa identyczne!");
+        wroc_z_bledem("Hasła nie są identyczne!");
     }
 
     //sprawdzenie czy uzytkownik już istnieje
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $spr->bind_param("ss", $email, $nazwa);
     $spr->execute();
     if ($spr->get_result()->num_rows > 0) {
-        wroc_z_bledem("Taki uzytkownik lub e-mail juz istnieje!");
+        wroc_z_bledem("Taki użytkownik lub e-mail już istnieje!");
     }
 
     //haszowanie

@@ -21,14 +21,14 @@ if (isset($_POST['usun_produkt'])) {
 
     if ($stmt->execute()) {
         if ($stmt->affected_rows > 0) {
-            $_SESSION['komunikat_edycja'] = "Produkt o nr $id został usuniety.";
+            $_SESSION['komunikat_edycja'] = "Produkt o nr $id został usunięty.";
             $_SESSION['typ_komunikatu_edycja'] = "success";
         } else {
             $_SESSION['komunikat_edycja'] = "Nie znaleziono produktu o nr $id.";
             $_SESSION['typ_komunikatu_edycja'] = "danger";
         }
     } else {
-        $_SESSION['komunikat_edycja'] = "Blad bazy danych podczas usuwania.";
+        $_SESSION['komunikat_edycja'] = "Błąd bazy danych podczas usuwania.";
         $_SESSION['typ_komunikatu_edycja'] = "danger";
     }
     $stmt->close();
@@ -45,7 +45,7 @@ if (isset($_POST['aktualizuj_produkt'])) {
         
         //walidacja pustych inputów
         if ($pole !== 'smak' && trim($nowaWartosc) === "") {
-            $_SESSION['komunikat_edycja'] = "Pole '$pole' nie moze byc puste!";
+            $_SESSION['komunikat_edycja'] = "Pole '$pole' nie moze być puste!";
             $_SESSION['typ_komunikatu_edycja'] = "danger";
             header("Location: ../strony/strona_admin.php");
             exit();
@@ -54,7 +54,7 @@ if (isset($_POST['aktualizuj_produkt'])) {
         if ($pole === 'cena') {
             $nowaWartosc = str_replace(',', '.', $nowaWartosc);
             if (!is_numeric($nowaWartosc)) {
-                $_SESSION['komunikat_edycja'] = "Wprowadzona cena nie jest liczba!";
+                $_SESSION['komunikat_edycja'] = "Wprowadzona cena nie jest liczbą!";
                 $_SESSION['typ_komunikatu_edycja'] = "danger";
                 header("Location: ../strony/strona_admin.php");
                 exit();
@@ -69,11 +69,11 @@ if (isset($_POST['aktualizuj_produkt'])) {
                 $_SESSION['komunikat_edycja'] = "Zaktualizowano pole '$pole' dla produktu $id.";
                 $_SESSION['typ_komunikatu_edycja'] = "success";
             } else {
-                $_SESSION['komunikat_edycja'] = "Brak zmian (ID $id nie istnieje lub dane sa identyczne).";
+                $_SESSION['komunikat_edycja'] = "Brak zmian (ID $id nie istnieje lub dane są identyczne).";
                 $_SESSION['typ_komunikatu_edycja'] = "danger";
             }
         } else {
-            $_SESSION['komunikat_edycja'] = "Blad bazy danych.";
+            $_SESSION['komunikat_edycja'] = "Bład bazy danych.";
             $_SESSION['typ_komunikatu_edycja'] = "danger";
         }
         $stmt->close();

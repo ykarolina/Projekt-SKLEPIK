@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     //sprawdzanie czy nie sa puste pola (poza samkiem bo opcjonalny)
     if (empty($nazwa_produktu) || empty($kategoria) || empty($zdjecie) || empty($cena)) {
-        $_SESSION['komunikat_produkt'] = "Musisz uzupełnic wszystkie pola formularza (smak jest opcjonalny)!";
+        $_SESSION['komunikat_produkt'] = "Musisz uzupełnić wszystkie pola formularza (smak jest opcjonalny)!";
         $_SESSION['typ_komunikatu_produkt'] = "danger";
         header("Location: ../strony/strona_admin.php");
         exit();
@@ -37,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['komunikat_produkt'] = "Produkt <b>$nazwa_produktu</b> został dodany do bazy.";
         $_SESSION['typ_komunikatu_produkt'] = "success";
     } else {
-        $_SESSION['komunikat_produkt'] = "Blad podczas dodawania produktu do bazy danych.";
+        $_SESSION['komunikat_produkt'] = "Bład podczas dodawania produktu do bazy danych.";
         $_SESSION['typ_komunikatu_produkt'] = "danger";
     }
 

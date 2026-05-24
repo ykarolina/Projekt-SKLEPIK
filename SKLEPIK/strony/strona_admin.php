@@ -52,7 +52,7 @@
         <div class="col-12">
     <div class="row g-2 justify-content-center">
         <div class="col-4 col-md-auto p-1 d-flex justify-content-center">
-            <button type="button" id="btnListaUzytkownikow" class="btn btnAdminPanel">lista uzytkowników</button>
+            <button type="button" id="btnListaUzytkownikow" class="btn btnAdminPanel">lista użytkowników</button>
         </div>
       
         <div class="col-4 col-md-auto p-1 d-flex justify-content-center">
@@ -68,7 +68,7 @@
         </div>
 
         <div class="col-6 col-md-auto p-1 d-flex justify-content-center">
-            <button type="button" id="btnListaZamowien" class="btn btnAdminPanel">lista zamówien</button>
+            <button type="button" id="btnListaZamowien" class="btn btnAdminPanel">lista zamówień</button>
         </div>
     </div>
 </div>
@@ -282,7 +282,7 @@
 </section>
 
 <section class="sekcjaZamowienia container mt-0">
-    <h1 class="tytulZamowien text-center mb-5">LISTA ZAMÓWIEN</h1>
+    <h1 class="tytulZamowien text-center mb-5">LISTA ZAMÓWIEŃ</h1>
         <?php include '../skrypty/lista_zamowien.php'; ?>
     <!-- <div class="kafelekZamowienie p-4 mb-5">
         <h4 class="nazwaKlienta mb-4">nazwa uzytkownika</h4>

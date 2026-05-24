@@ -27,7 +27,7 @@ if (isset($_POST['usun_produkt'])) {
     $zapytanie->bind_param("i", $id_produktu);
     
     if ($zapytanie->execute()) {
-        $_SESSION['komunikat_edycja'] = "Produkt został pomyslnie usuniety.";
+        $_SESSION['komunikat_edycja'] = "Produkt został pomyślnie usunięty.";
         $_SESSION['typ_komunikatu_edycja'] = "success";
     } else {
         $_SESSION['komunikat_edycja'] = "Błąd podczas usuwania produktu.";
@@ -79,7 +79,7 @@ if ($wynik && $wynik->num_rows > 0) {
         <?php
     }
 } else {
-    echo '<p class="mt-2">Brak produktow w kategorii: ' . htmlspecialchars($wybrana_kat) . '</p>';
+    echo '<p class="mt-2">Brak produktów w kategorii: ' . htmlspecialchars($wybrana_kat) . '</p>';
 }
 
 // wywietlanie komunikatu

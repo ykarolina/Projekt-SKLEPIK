@@ -85,7 +85,7 @@ if ($wynik_zamowienia->num_rows > 0) {
         echo '    <select name="nowy_status" class="inputAdmin miniSelect">';
         //tablica zeby statusy sie nie mylily
         $opcje_statusu = [
-            'oczekujace' => 'oczekujace', 
+            'oczekujące' => 'oczekujące', 
             'realizacja' => 'w realizacji', 
             'zrealizowane' => 'zrealizowane'
         ];
@@ -94,7 +94,7 @@ if ($wynik_zamowienia->num_rows > 0) {
             echo "<option value='$klucz' $wybrany>$wartosc</option>";
         }   
         echo '    </select>';
-        echo '    <button type="submit" name="akcja_status" class="mt-2 p-1 btnAdminPanel btnZmienStatus">zmien status</button>';
+        echo '    <button type="submit" name="akcja_status" class="mt-2 p-1 btnAdminPanel btnZmienStatus">zmień status</button>';
         echo '  </form>';
         echo '</div>';
         echo '</div>';

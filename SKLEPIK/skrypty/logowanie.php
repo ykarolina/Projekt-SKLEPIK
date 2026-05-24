@@ -46,12 +46,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             
         } else {
             //nie pasujace haslo
-            $_SESSION['komunikat'] = "Błedne hasło!";
+            $_SESSION['komunikat'] = "Błędne hasło!";
             $_SESSION['typ_komunikatu'] = "danger";
         }
     } else {
         //brak maila w bazie
-        $_SESSION['komunikat'] = "Uzytkownik o takim adresie e-mail nie istnieje!";
+        $_SESSION['komunikat'] = "Użytkownik o takim adresie e-mail nie istnieje!";
         $_SESSION['typ_komunikatu'] = "danger";
     }
 

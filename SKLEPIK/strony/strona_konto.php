@@ -47,16 +47,16 @@ include '../skrypty/konto.php'; // To musi być PIERWSZA linia
         <div class="row mb-4">
             <div class="col-12 text-center text-lg-start">
                 <h2 class="napisCzesc">
-                    CZESC <span class="nazwaUser"><?php echo htmlspecialchars($nazwa_user); ?></span>, witamy w zegowskiej szamie
+                    CZEŚĆ <span class="nazwaUser"><?php echo htmlspecialchars($nazwa_user); ?></span>, witamy w zegowskiej szamie
                 </h2>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-xl-7">
-                <h5 class="naglowekHistorii mb-3">historia zamówien</h5>
+                <h5 class="naglowekHistorii mb-3">historia zamówień </h5>
                 <div class="zamowieniaHistoria">
                 <?php if (empty($zamowienia)): ?>
-                    <p class="text-muted">Nie masz jeszcze zadnych zamowien.</p>
+                    <p class="text-muted">Nie masz jeszcze zadnych zamowień.</p>
                 <?php else: ?>
                     <?php foreach ($zamowienia as $id_zam => $dane): ?>
                         <div class="kafelekZamowienieUser p-2 p-lg-3 mb-4">

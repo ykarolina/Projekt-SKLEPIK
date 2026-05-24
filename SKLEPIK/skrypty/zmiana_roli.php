@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // sprawdzanie czy nie puste
     if (empty($nazwa_uzytkownika)) {
-        $_SESSION['komunikat_rola'] = "Musisz uzupełnic nazwe uzytkownika!";
+        $_SESSION['komunikat_rola'] = "Musisz uzupełnić nazwę użytkownika!";
         $_SESSION['typ_komunikatu_rola'] = "danger";
         header("Location: ../strony/strona_admin.php");
         exit();
@@ -35,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // sprawdzanie czy rola się zmienia czy jest taka sama
         if ($aktualna_rola === $nowa_rola) {
-            $_SESSION['komunikat_rola'] = "Uzytkownik $nazwa_uzytkownika ma juz przypisana role: $nowa_rola!";
+            $_SESSION['komunikat_rola'] = "Użytkownik $nazwa_uzytkownika ma już przypisana rolę: $nowa_rola!";
             $_SESSION['typ_komunikatu_rola'] = "danger";
         } else {
             // zmiana roli
@@ -43,16 +43,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $zapytanie_aktualizujace->bind_param("ss", $nowa_rola, $nazwa_uzytkownika);
             
             if ($zapytanie_aktualizujace->execute()) {
-                $_SESSION['komunikat_rola'] = "Rola uzytkownika $nazwa_uzytkownika została zmieniona na $nowa_rola.";
+                $_SESSION['komunikat_rola'] = "Rola użytkownika $nazwa_uzytkownika została zmieniona na $nowa_rola.";
                 $_SESSION['typ_komunikatu_rola'] = "success";
             } else {
-                $_SESSION['komunikat_rola'] = "Wystapił blad podczas aktualizacji bazy danych.";
+                $_SESSION['komunikat_rola'] = "Wystąpił błąd podczas aktualizacji bazy danych.";
                 $_SESSION['typ_komunikatu_rola'] = "danger";
             }
             $zapytanie_aktualizujace->close();
         }
     } else {
-        $_SESSION['komunikat_rola'] = "Nie znaleziono uzytkownika o nazwie: $nazwa_uzytkownika.";
+        $_SESSION['komunikat_rola'] = "Nie znaleziono użytkownika o nazwie: $nazwa_uzytkownika.";
         $_SESSION['typ_komunikatu_rola'] = "danger";
     }
 

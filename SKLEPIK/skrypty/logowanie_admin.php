@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($uzytkownik = $wynik->fetch_assoc()) {
         //sprawdzanie kodu dostepu != zamiast !== bo moze byc problem w bazie
         if ($kod_z_formularza != $uzytkownik['kod_dostepu']) {
-            $_SESSION['komunikat'] = "Błedny kod dostepu!";
+            $_SESSION['komunikat'] = "Błędny kod dostępu!";
             header("Location: ../strony/strona_logowanie_admin.php");
             exit; //koniec jesli zly
         }
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit;
             
         } else {
-            $_SESSION['komunikat'] = "Błedne hasło administratora!";
+            $_SESSION['komunikat'] = "Błędne hasło administratora!";
         }
     } else {
         $_SESSION['komunikat'] = "Administrator o nazwie '$nazwa' nie istnieje!";

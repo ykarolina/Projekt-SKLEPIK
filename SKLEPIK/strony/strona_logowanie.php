@@ -48,8 +48,7 @@
                                 ?>
                             </div>
                         <?php endif; ?>
-
-                        <button type="submit" class="btnLogRej">Zaloguj</button>
+                         <button type="submit" class="btnLogRej">Zaloguj</button>
                     </form>
                 </div>
 
