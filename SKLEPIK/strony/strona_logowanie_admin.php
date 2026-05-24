@@ -26,7 +26,7 @@
     <main class="sectionLogRej container d-flex flex-column justify-content-center align-items-center">
     <div class="row justify-content-center w-100">
         <div class="col-12 text-center">
-            <h2 class="tytulLogRej">Zaloguj sie jako administrator</h2>
+            <h2 class="tytulLogRej">Zaloguj się jako administrator</h2>
         </div>
         <div class="col-12 col-md-6 col-lg-4">
             <div class="ramkaLogRej">
@@ -36,7 +36,7 @@
                         <input type="text" name="nazwaAdmin" class="inputLogRej">
                     </div>
                     <div class="labelLogRej">
-                        <label>Kod dostepu:</label>
+                        <label>Kod dostępu:</label>
                         <input type="number" name="kodDostepu" class="inputLogRej">
                     </div>
                     <div class="labelLogRej">
