@@ -52,7 +52,7 @@
                     </form>
                 </div>
 
-                <p class="tekstLog">Nie masz jeszcze konta? <a href="strona_rejestracja.html" class="linkUzytkownik">Zarejestruj sie</a></p>
+                <p class="tekstLog">Nie masz jeszcze konta? <a href="strona_rejestracja.php" class="linkUzytkownik">Zarejestruj sie</a></p>
                 <p class="tekstLog"><a href="#" class="linkAdmin">Zaloguj jako administrator</a></p>
             </div>
         </div>
