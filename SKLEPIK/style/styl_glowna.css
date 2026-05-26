@@ -186,3 +186,12 @@ h2{
 /* .Produkty{
     overflow: visible;
 } */
+
+.ProduktyBulki{
+    height: 300px !important;
+    max-width: 1800px !important;
+    /* background-color: blue; */
+    overflow-x:scroll;
+    overflow-y:hidden;
+    display: flex;
+}
