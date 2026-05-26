@@ -1,5 +1,5 @@
 <?php 
-include '../skrypty/konto.php'; // To musi być PIERWSZA linia
+include '../skrypty/konto.php';
 ?>
 <!DOCTYPE html>
 <html lang="pl">
