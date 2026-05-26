@@ -2,11 +2,12 @@
 session_start();
 
 $serwer = "localhost";
-$uzytkownik_db = "root";
-$haslo_db = "";
-$nazwa_db = "sklepik";
+$uzytkownik_db = "sklepikzeg";
+$haslo_db = "Baza123!";
+$nazwa_db = "ykarolina";
 
 $polaczenie = new mysqli($serwer, $uzytkownik_db, $haslo_db, $nazwa_db);
+
 if ($polaczenie->connect_error) {
     die("Bład połaczenia: " . $polaczenie->connect_error);
 }

@@ -4,11 +4,12 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 $serwer = "localhost";
-$uzytokwnik_db = "root";
-$haslo_db = "";
-$baza = "sklepik";
+$uzytkownik_db = "sklepikzeg";
+$haslo_db = "Baza123!";
+$nazwa_db = "ykarolina";
 
-$polaczenie = new mysqli($serwer, $uzytokwnik_db, $haslo_db, $baza);
+$polaczenie = new mysqli($serwer, $uzytkownik_db, $haslo_db, $nazwa_db);
+
 if ($polaczenie->connect_error) die("Błąd połączenia: " . $polaczenie->connect_error);
 
 //przycisk zmien status
