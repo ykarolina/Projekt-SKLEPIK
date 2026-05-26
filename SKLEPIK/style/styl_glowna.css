@@ -183,10 +183,16 @@ h2{
     height: 150px;
     margin-top: 10px;
 }
-/* .Produkty{
-    overflow: visible;
-} */
-
+.imgPromoInne{
+    width: 110px;
+    height: 150px;
+    margin-top: 10px;
+}
+.imgPromoInne2{
+    width: 145px;
+    height: 150px;
+    margin-top: 10px;
+}
 .ProduktyBulki{
     height: 300px !important;
     max-width: 1800px !important;
