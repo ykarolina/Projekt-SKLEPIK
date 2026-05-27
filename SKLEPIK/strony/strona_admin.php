@@ -39,7 +39,7 @@
         <nav class="navTel" id="mobileMenu">
             <a href="strona_glowna.html"><img src="../grafiki/loga/logo_hot-dog.png" class="imgHeader"> Produkty</a> 
             <a href="strona_koszyk.html"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
-            <a href="strona_konto.html"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"> Konto</a>
+            <a href="strona_konto.php"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"> Konto</a>
         </nav>
     </header>
     <main class="strona">

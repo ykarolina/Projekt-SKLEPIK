@@ -39,7 +39,7 @@ include '../skrypty/konto.php';
         <nav class="navTel" id="mobileMenu">
             <a href="strona_glowna.html#oferta"><img src="../grafiki/loga/logo_hot-dog.png" class="imgHeader"> Produkty</a> 
             <a href="strona_koszyk.html"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
-            <a href="strona_logowanie_admin.html"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
+            <a href="strona_logowanie_admin.php"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
         </nav>
     </header>
 <main class="strona">

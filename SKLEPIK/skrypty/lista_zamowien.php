@@ -88,7 +88,7 @@ if ($wynik_zamowienia->num_rows > 0) {
         //tablica zeby statusy sie nie mylily
         $opcje_statusu = [
             'oczekujące' => 'oczekujące', 
-            'realizacja' => 'w realizacji', 
+            'w realizacji' => 'w realizacji', 
             'zrealizowane' => 'zrealizowane'
         ];
         foreach ($opcje_statusu as $klucz => $wartosc) {
