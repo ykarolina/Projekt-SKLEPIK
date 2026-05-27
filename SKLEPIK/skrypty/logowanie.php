@@ -7,7 +7,7 @@ $haslo_db = "Baza123!";
 $nazwa_db = "ykarolina";
 
 $polaczenie = new mysqli($serwer, $uzytkownik_db, $haslo_db, $nazwa_db);
-
+$polaczenie->set_charset("utf8mb4");
 
 //sprawdzenie połączenia
 if ($polaczenie->connect_error) {
