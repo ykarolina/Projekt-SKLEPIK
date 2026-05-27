@@ -3,11 +3,12 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 $serwer = "localhost";
-$uzytkownik_db = "root";
-$haslo_db = "";
-$nazwa_db = "sklepik";
+$uzytkownik_db = "sklepikzeg";
+$haslo_db = "Baza123!";
+$nazwa_db = "ykarolina";
 
 $polaczenie = new mysqli($serwer, $uzytkownik_db, $haslo_db, $nazwa_db);
+
 
 if ($polaczenie->connect_error) {
     die("Błąd połączenia: " . $polaczenie->connect_error);
@@ -42,15 +43,25 @@ if (isset($_POST['usun_produkt'])) {
 $wybrana_kat = isset($_POST['filtr_kategorii']) ? $_POST['filtr_kategorii'] : 'wszystkie';
 
 if ($wybrana_kat === 'wszystkie') {
-    $sql = "SELECT id, nazwa, cena, kategoria ,smak, czy_promocja, zdjecie FROM produkty ORDER BY id ASC";
+
+    $sql = "SELECT id, nazwa, cena, kategoria, smak, czy_promocja, zdjecie FROM produkty ORDER BY id ASC";
+    $wynik = $polaczenie->query($sql);
+
+} elseif ($wybrana_kat === 'napoje') {
+
+    $sql = "SELECT id, nazwa, cena, kategoria, smak, czy_promocja, zdjecie FROM produkty 
+            WHERE kategoria IN ('sok_szklo', 'sok_karton', 'sok_2l', 'sok_05', 'woda') 
+            ORDER BY id ASC";
     $wynik = $polaczenie->query($sql);
 } else {
-    $sql = "SELECT id, nazwa, cena, kategoria, smak, czy_promocja, zdjecie FROM produkty WHERE kategoria = ? ORDER BY id DESC";
+
+    $sql = "SELECT id, nazwa, cena, kategoria, smak, czy_promocja, zdjecie FROM produkty WHERE kategoria = ? ORDER BY id ASC";
     $stmt = $polaczenie->prepare($sql);
     $stmt->bind_param("s", $wybrana_kat);
     $stmt->execute();
     $wynik = $stmt->get_result();
 }
+
 
 //wyswietlanie listy
 if ($wynik && $wynik->num_rows > 0) {

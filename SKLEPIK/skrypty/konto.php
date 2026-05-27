@@ -11,6 +11,7 @@ $nazwa_db = "ykarolina";
 
 $polaczenie = new mysqli($serwer, $uzytkownik_db, $haslo_db, $nazwa_db);
 
+
 if ($polaczenie->connect_error) {
     die("Błąd połączenia: " . $polaczenie->connect_error);
 }
