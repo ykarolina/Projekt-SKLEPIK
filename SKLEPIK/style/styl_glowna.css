@@ -148,12 +148,23 @@ h2{
     margin-top: 50px;
 }
 
-@media screen and (max-width: 640vh) {
+@media screen and (max-width: 1500px) {
   #Promo3
   {
     display: none;
   }
 }
+@media screen and (max-width: 1000px) {
+  #Promo2
+  {
+    display: none;
+  }
+  #ofertaNAV
+  {
+    display: none;
+  }
+}
+
 
 /*============================= Produkty -  KAWA ===============================*/
 .ProduktyKawa{
