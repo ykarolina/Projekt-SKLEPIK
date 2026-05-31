@@ -20,7 +20,7 @@
                 <img src="../grafiki/loga/zegowskaSzama_v2.png" class="logo">
             </div>
             <div class="kontener2">
-                <a href="strona_koszyk.html"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
+                <a href="strona_koszyk.php"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
                 <a href="strona_konto.php"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"> Konto</a>
                 <a href="strona_logowanie_admin.php"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
             </div>
@@ -32,7 +32,7 @@
         </div>
 
         <nav class="navTel" id="mobileMenu">
-            <a href="strona_koszyk.html"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
+            <a href="strona_koszyk.php"><img src="../grafiki/loga/logo_koszyk.png" class="imgHeader"> Koszyk</a>
             <a href="strona_konto.php"><img src="../grafiki/loga/logo_konto.png" class="imgHeader"> Konto</a>
             <a href="strona_logowanie_admin.php"><img src="../grafiki/loga/admin.png" class="imgHeader"> Admin</a>
         </nav>
@@ -94,43 +94,64 @@
             <div class="row w-auto m-0 Produkty">
                 <h1 id="kawaID">Kawa</h1>
                 <div class="col-12 col-md-4 d-flex w-100 m-0 ProduktyKawa flex-nowrap">
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="biala"
+                        data-cena="2.50"
+                        data-img="../grafiki/kawy/biala.png">
                         <img src="../grafiki/kawy/biala.png" alt="Promocja 1" class="imgPromo">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Biała</p>
                         <p style="font-size: 35px; margin: 0px;">2,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="cappuccino"
+                        data-cena="3.50"
+                        data-img="../grafiki/kawy/cappuccino.png">
                         <img src="../grafiki/kawy/cappuccino.png" alt="Promocja 1" class="imgPromo">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Cappuccino</p>
                         <p style="font-size: 35px; margin: 0px;">3,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="czarna"
+                        data-cena="2"
+                        data-img="../grafiki/kawy/czarna.png">
                         <img src="../grafiki/kawy/czarna.png" alt="Promocja 1" class="imgPromo">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Czarna</p>
                         <p style="font-size: 35px; margin: 0px;">2 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="double_espresso"
+                        data-cena="1.50"
+                        data-img="../grafiki/kawy/double_espresso.png">
                         <img src="../grafiki/kawy/double_espresso.png" alt="Promocja 1" class="imgPromo">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Double Espresso</p>
                         <p style="font-size: 35px; margin: 0px;">1,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Espresso"
+                        data-cena="1.50"
+                        data-img="../grafiki/kawy/espresso.png">
                         <img src="../grafiki/kawy/espresso.png" alt="Promocja 1" class="imgPromo">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Espresso</p>
                         <p style="font-size: 35px; margin: 0px;">1,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="espresso_macchiato"
+                        data-cena="2.50"
+                        data-img="../grafiki/kawy/espresso_macchiato.png">
                         <img src="../grafiki/kawy/espresso_macchiato.png" alt="Promocja 1" class="imgPromo">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Espresso Macchiato</p>
                         <p style="font-size: 35px; margin: 0px;">2,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="latte"
+                        data-cena="3.50"
+                        data-img="../grafiki/kawy/latte.png">
                         <img src="../grafiki/kawy/latte.png" alt="Promocja 1" class="imgPromo" style="height: 160px;">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Latte</p>
                         <p style="font-size: 35px; margin: 0px;">3,50 zł</p>
@@ -141,73 +162,109 @@
 
                 <h1 id="napojeID">Napoje</h1>
                 <div class=" m-0 ProduktyNapoje col-12 col-md-4 d-flex w-100  flex-nowrap">
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok brzoskwinia 500ml"
+                        data-cena="3.50"
+                        data-img="../grafiki/napoje/sok_05_brzoskwinia.jpg">
                         <img src="../grafiki/napoje/sok_05_brzoskwinia.jpg" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Brzoskwinia <b>500ml</b></p>
                         <p style="font-size: 35px; margin: 0px;">3,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center ">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok mięta 500ml"
+                        data-cena="3.50"
+                        data-img="../grafiki/napoje/sok_05_mieta.jpg">
                         <img src="../grafiki/napoje/sok_05_mieta.jpg" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Mięta <b>500ml</b></p>
                         <p style="font-size: 35px; margin: 0px;">3,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok arbuz 500ml"
+                        data-cena="3.50"
+                        data-img="../grafiki/napoje/sok_05_arbuz.png">
                         <img src="../grafiki/napoje/sok_05_arbuz.png" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Arbuz <b>500ml</b></p>
                         <p style="font-size: 35px; margin: 0px;">3,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok wiśnia 500ml"
+                        data-cena="3.50"
+                        data-img="../grafiki/napoje/sok_05_wisnia.jpg">
                         <img src="../grafiki/napoje/sok_05_wisnia.jpg" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Wisnia <b>500ml</b></p>
                         <p style="font-size: 35px; margin: 0px;">3,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center ">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok brzoskwinia 2l"
+                        data-cena="6"
+                        data-img="../grafiki/napoje/sok_2l_brzoskwinia.jpg">
                         <img src="../grafiki/napoje/sok_2l_brzoskwinia.jpg" alt="Promocja 1" class="imgPromoNapoje2" style="width: 80px;">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Brzoskwinia <b>2l</b></p>
                         <p style="font-size: 35px; margin: 0px;">6 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center ">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok jabłko 2l"
+                        data-cena="6"
+                        data-img="../grafiki/napoje/sok_2l_jablko.jpg">
                         <img src="../grafiki/napoje/sok_2l_jablko.jpg" alt="Promocja 1" class="imgPromoNapoje2">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Jabłko <b>2l</b></p>
                         <p style="font-size: 35px; margin: 0px;">6 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                     <div class="promoProdukt d-flex flex-column align-items-center ">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok wiśnia 2l"
+                        data-cena="6"
+                        data-img="../grafiki/napoje/sok_2l_wisnia.jpg">
                         <img src="../grafiki/napoje/sok_2l_wisnia.jpg" alt="Promocja 1" class="imgPromoNapoje2">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Wisnia <b>2l</b></p>
                         <p style="font-size: 35px; margin: 0px;">6 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok bananowy 1l"
+                        data-cena="4"
+                        data-img="../grafiki/napoje/sok_karton_banan.jpg">
                         <img src="../grafiki/napoje/sok_karton_banan.jpg" alt="Promocja 1" class="imgPromoNapoje2">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Karton Banan <b>1l</b></p>
                         <p style="font-size: 35px; margin: 0px;">4 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok granat 1l"
+                        data-cena="4"
+                        data-img="../grafiki/napoje/sok_karton_granat.jpg">
                         <img src="../grafiki/napoje/sok_karton_granat.jpg" alt="Promocja 1" class="imgPromoNapoje2">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Karton Granat <b>1l</b></p>
                         <p style="font-size: 35px; margin: 0px;">4 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok kaktus 1l"
+                        data-cena="4"
+                        data-img="../grafiki/napoje/sok_karton_kaktus.jpg">
                         <img src="../grafiki/napoje/sok_karton_kaktus.jpg" alt="Promocja 1" class="imgPromoNapoje2">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Karton Kaktus <b>1l</b></p>
                         <p style="font-size: 35px; margin: 0px;">4 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok mango 1l"
+                        data-cena="4"
+                        data-img="../grafiki/napoje/sok_karton_mango.jpg">
                         <img src="../grafiki/napoje/sok_karton_mango.jpg" alt="Promocja 1" class="imgPromoNapoje2">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Karton Mango <b>1l</b></p>
                         <p style="font-size: 35px; margin: 0px;">4 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Sok żurawina 1l"
+                        data-cena="4"
+                        data-img="../grafiki/napoje/sok_karton_zurawina.jpg">
                         <img src="../grafiki/napoje/sok_karton_zurawina.jpg" alt="Promocja 1" class="imgPromoNapoje2">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tymbark Karton Żurawina <b>1l</b></p>
                         <p style="font-size: 35px; margin: 0px;">4 zł</p>
@@ -216,43 +273,64 @@
                 </div>
                 <h1 id="bulkiID">Bułki</h1>
                 <div class=" m-0 ProduktyBulki col-12 col-md-4 d-flex w-100  flex-nowrap">
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Bułka Gołosza"
+                        data-cena="6"
+                        data-img="../grafiki/bulki/bulka_golosza.png">
                         <img src="../grafiki/bulki/bulka_golosza.png" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Bułka Gołosza <b>160gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">6 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Bułka masło"
+                        data-cena="2"
+                        data-img="../grafiki/bulki/bulka_maslo.png">
                         <img src="../grafiki/bulki/bulka_maslo.png" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Bułka z masłem <b>160gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">2 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Bułka ser"
+                        data-cena="3.50"
+                        data-img="../grafiki/bulki/bulka_ser.png">
                         <img src="../grafiki/bulki/bulka_ser.png" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Bułka z serem <b>160gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">3,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Bułka ser i szynka"
+                        data-cena="4"
+                        data-img="../grafiki/bulki/bulka_ser_szynka.png">
                         <img src="../grafiki/bulki/bulka_ser_szynka.png" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Bułka z szynka i serem <b>160gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">4 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Bułka sos"
+                        data-cena="2.50"
+                        data-img="../grafiki/bulki/bulka_sos.png">
                         <img src="../grafiki/bulki/bulka_sos.png" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Bułka z sosem <b>160gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">2,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Bułka szynka"
+                        data-cena="3.50"
+                        data-img="../grafiki/bulki/bulka_szynka.png">
                         <img src="../grafiki/bulki/bulka_szynka.png" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Bułka z szynka <b>160gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">3,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Bułka sucha"
+                        data-cena="1.50"
+                        data-img="../grafiki/bulki/bulka_sucha.png">
                         <img src="../grafiki/bulki/bulka_sucha.png" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Sucha bułka <b>160gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">1,50 zł</p>
@@ -261,37 +339,55 @@
                 </div>
                 <h1 id="na_cieploID">Napoje na ciepło</h1>
                 <div class=" m-0 ProduktyBulki col-12 col-md-4 d-flex w-100  flex-nowrap">
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Double hotdog"
+                        data-cena="7"
+                        data-img="../grafiki/na_cieplo/double_hot_dog.jpg">
                         <img src="../grafiki/na_cieplo/double_hot_dog.jpg" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Double HotDog <b>100gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">7 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Classic hotdog"
+                        data-cena="5.50"
+                        data-img="../grafiki/na_cieplo/hot_dog.jpg">
                         <img src="../grafiki/na_cieplo/hot_dog.jpg" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Classic HotDog <b>80gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">5,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Tost masło"
+                        data-cena="1.50"
+                        data-img="../grafiki/na_cieplo/tost_maslo.jpg">
                         <img src="../grafiki/na_cieplo/tost_maslo.jpg" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tost z masłem <b>75gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">1,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Tost ser"
+                        data-cena="2.50"
+                        data-img="../grafiki/na_cieplo/tost_ser.jpg">
                         <img src="../grafiki/na_cieplo/tost_ser.jpg" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tost z serem <b>85gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">2,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Tost szynka"
+                        data-cena="2.50"
+                        data-img="../grafiki/na_cieplo/tost_szynka.jpg">
                         <img src="../grafiki/na_cieplo/tost_szynka.jpg" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tost z szynka <b>85gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">2,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Tost szynka i ser"
+                        data-cena="3"
+                        data-img="../grafiki/na_cieplo/tost_szynka_ser.jpg">
                         <img src="../grafiki/na_cieplo/tost_szynka_ser.jpg" alt="Promocja 1" class="imgPromoNapoje">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Tost z serem i szynka <b>87gr</b></p>
                         <p style="font-size: 35px; margin: 0px;">3 zł</p>
@@ -300,37 +396,55 @@
                 </div>
                 <h1 id="inneID">Inne</h1>
                 <div class=" m-0 ProduktyBulki col-12 col-md-4 d-flex w-100  flex-nowrap">
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Gorący kubek barszcz"
+                        data-cena="2.50"
+                        data-img="../grafiki/inne/goracy_kubek_barszcz.png">
                         <img src="../grafiki/inne/goracy_kubek_barszcz.png" alt="Promocja 1" class="imgPromoInne">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Gorący Kubek Barszcz <b></b></p>
                         <p style="font-size: 35px; margin: 0px;">2,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Gorący kubek pomidorowa"
+                        data-cena="2.50"
+                        data-img="../grafiki/inne/goracy_kubek_pomidorowa.png">
                         <img src="../grafiki/inne/goracy_kubek_pomidorowa.png" alt="Promocja 1" class="imgPromoInne">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Gorący Kubek Pomidorowa <b></b></p>
                         <p style="font-size: 35px; margin: 0px;">2,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Gorący kubek rosół"
+                        data-cena="2.50"
+                        data-img="../grafiki/inne/goracy_kubek_rosol.png">
                         <img src="../grafiki/inne/goracy_kubek_rosol.png" alt="Promocja 1" class="imgPromoInne">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Gorący Kubek Rosół <b></b></p>
                         <p style="font-size: 35px; margin: 0px;">2,50 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Mullermilch banan"
+                        data-cena="4"
+                        data-img="../grafiki/inne/mullermilch_bananowy.png">
                         <img src="../grafiki/inne/mullermilch_bananowy.jpg" alt="Promocja 1" class="imgPromoInne2">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Mullermilch Bananowy <b></b></p>
                         <p style="font-size: 35px; margin: 0px;">4 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Mullermilch czekoladowy"
+                        data-cena="4"
+                        data-img="../grafiki/inne/mullermilch_czekoladowy.png">
                         <img src="../grafiki/inne/mullermilch_czekoladowy.png" alt="Promocja 1" class="imgPromoInne2">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Mullermilch Czekoladowy <b></b></p>
                         <p style="font-size: 35px; margin: 0px;">4 zł</p>
                         <button class="btnPromo">Dodaj do koszyka</button>
                     </div>
-                    <div class="promoProdukt d-flex flex-column align-items-center">
+                    <div class="promoProdukt d-flex flex-column align-items-center" 
+                        data-nazwa="Mullermilch truskawkowy"
+                        data-cena="4"
+                        data-img="../grafiki/inne/mullermilch_truskawkowy.jpg">
                         <img src="../grafiki/inne/mullermilch_truskawkowy.jpg" alt="Promocja 1" class="imgPromoInne2">
                         <p class="tekstPromo" style="margin-bottom: 0px;">Mullermilch Truskawkowy <b></b></p>
                         <p style="font-size: 35px; margin: 0px;">4 zł</p>
@@ -365,4 +479,5 @@
     </div>
 </footer>
 </body>
+<script src="../skrypty/koszyk.js"></script>
 </html>

@@ -42,7 +42,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['rola'] = $uzytkownik['rola'];
 
             //strona głowna
-            header("Location: ../strony/strona_glowna.html");
+            header("Location: ../strony/strona_glowna.php");
             exit;
             
         } else {

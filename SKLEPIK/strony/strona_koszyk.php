@@ -49,44 +49,12 @@
         <h2 class="tytulKoszykPelny">Twoje produkty</h2>
 
         <div class="listaProduktow">
-
-            <div class="pojedynczyProdukt d-flex flex-column flex-md-row align-items-center justify-content-between">
-                <div class="produktInfo d-flex flex-column flex-md-row align-items-center">
-                    <img src="../grafiki/na_cieplo/hot_dog.jpg" alt="hot-dog" class="imgProdukt">
-                    <div class="produktOpis text-center text-md-start">
-                        <span class="nazwa">hot-dog</span>
-                        <span class="dodatki">sos: musztarda</span>
-                    </div>
-                </div>
-
-                <div class="cena my-2 my-md-0">5,50zł</div>
-
-                <div class="akcje d-flex flex-row flex-md-column align-items-center align-items-md-end gap-3 gap-md-1">
-                    <div class="ilosc">ilość: 1 <button class="zmienIlosc">+</button><button class="zmienIlosc">-</button></div>
-                    <button class="btnUsun">usuń z koszyka</button>
-                </div>
-            </div>
-
-            <div class="pojedynczyProdukt d-flex flex-column flex-md-row align-items-center justify-content-between">
-                <div class="produktInfo d-flex flex-column flex-md-row align-items-center">
-                    <img src="../grafiki/kawy/espresso.png" alt="espresso" class="imgProdukt">
-                    <div class="produktOpis text-center text-md-start">
-                        <span class="nazwa">espresso</span>
-                    </div>
-                </div>
-
-                <div class="cena my-2 my-md-0">1,50zł</div>
-
-                <div class="akcje d-flex flex-row flex-md-column align-items-center align-items-md-end gap-3 gap-md-1">
-                    <div class="ilosc">ilość: 1 <button class="zmienIlosc">+</button><button class="zmienIlosc">-</button></div>
-                    <button class="btnUsun">usuń z koszyka</button>
-                </div>
-            </div>
-
         </div>
 
         <div class="podsumowanie">
-            <p class="koszt">Koszt zamówienia: 7,00zł</p>
+            <p class="koszt" id="kosztCalkowity">
+                Koszt zamówienia: 0,00 zł
+            </p>
             <button class="btnRealizuj">Zrealizuj zamówienie</button>
         </div>
     </section>
@@ -123,4 +91,5 @@
         }
     </script>
 </body>
+<script src="../skrypty/koszyk_wyswietl.js"></script>
 </html>
